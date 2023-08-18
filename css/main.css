@@ -14,14 +14,15 @@ div[class*=Inner]{
     z-index: 9999;
     position: fixed;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: #fff;
     text-align: center;
 }
 #header .navBar{
     max-width: 1280px;
     display: flex;
     justify-content: space-between;
-    line-height: 4em;
+    flex-flow: row wrap;
+    line-height: 3em;
     margin: 0 auto;
     position: relative;
 }
@@ -42,9 +43,10 @@ div[class*=Inner]{
 #pcNav ul{
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
 }
 #pcNav ul li{
-    width: 100%;
+    /* width: 100%; */
 }
 #pcNav ul li a{
     display: block;
@@ -102,7 +104,8 @@ div[class*=Inner]{
 }
 
 
-@media only screen and (max-width:1280px){}
+@media only screen and (max-width:940px){
+}
 @media only screen and (max-width:740px){
     #header .mobOpen{
         display: block;
@@ -151,27 +154,13 @@ div[class*=Top] h1 strong::after{
     font-weight: 600;
     color: #000;
 }
-#page2 .page2Top a{
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    font-size: 0.875em;
-    width: 7em;
-    height: 7em;
-    line-height: 7em;
-    position: absolute;
-    right: 2em;
-    top: 0;
-}
-#page2 .page2Top a i{}
 
 #page2 .page2Cont{}
 #page2 .page2Cont ul{}
 #page2 .page2Cont ul li{
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
     border-bottom: 1px solid #000;
     padding: 2% 0;
 }
@@ -204,15 +193,29 @@ div[class*=Top] h1 strong::after{
     color: #333;
 }
 
+@media only screen and (max-width:940px){
+    #page2 .page2Inner{
+        padding: 0 5%;
+    }
+}
+@media only screen and (max-width:740px){
+    
+}
+@media only screen and (max-width:375px){}
+
 /* 포트폴리오 */
 #page3{
     padding: 5% 0;
     
 }
-#page3 .potpInner{
-    
+#page3 .page3Inner{
+    width: 100%;
 }
-#page3 .page3Top{}
+#page3 .page3Top{
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 2%;
+}
 #page3 .page3Top h1{
     font-weight: 400;
     font-size: 2em;
@@ -220,28 +223,254 @@ div[class*=Top] h1 strong::after{
     padding-bottom: 2%;
 }
 #page3 .page3Top h1 strong{}
-#page3 .page3Top ul{
+#page3 .page3Top .page3Fix > ul{
     display: flex;
     justify-content: start;
     border-top: 1px solid #ccc;
-    
+    flex-flow: row wrap;
 }
-#page3 .page3Top ul li{
+#page3 .page3Top .page3Fix > ul li{
     font-size: 1.25em;
     font-weight: 500;
     padding-top: 1%;
     margin-right: 5%;
-    /* border-top: 5px solid transparent;
-    transition: 0.3s; */
+    border-top: 5px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
 }
-/* #page3 .page3Top ul li:hover{
+#page3 .page3Top .page3Fix > ul li:hover{
     border-top: 5px solid #000;
+}
+#page3 .page3Fix{
+    max-width: 1280px;
+    background-color: #fff;
+}
+#page3 .page3Selection{
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+}
+#page3 .page3Selection ul{
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+}
+/* #page3 .page3Selection ul:first-child{
+    margin-bottom: 10px;
 } */
-#page3 .page3Top.active ul li::before{
-    content: "";
+#page3 .page3Selection ul li{
+    box-sizing: border-box;
+    margin-right: 2%;
+    line-height: 3em;
+}
+#page3 .page3Selection ul li a{
+    display: inline-block;
+    background-color: #f3f3f3;
+    line-height: 2em;
+    padding: 0 20px;
+    color: #333;
+}
+#page3 .page3Selection ul li.active a{
+    color: #000;
+    font-weight: 500;
+}
+#page3 .page3Top.fixed{
+    position: fixed;
+    
+}
+#page3 .page3Top.hide{
+    display: none;
+}
+
+
+#page3Cont{
+}
+#page3Cont .page3Box{
+    margin-top: 5%;
+}
+#page3Cont .page3Box > a{}
+#page3Cont .page3Box > a img{
     display: block;
-    width: 100%;
-    height: 5px;
-    background-color: #000;
+    max-width: 1280px;
+    height: auto;
+}
+#page3Cont .page3Box > div{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+#page3Cont .left{
+    text-align: right;
+    font-family: Nanum Gothic;
+    font-weight: 800;
+    font-size: 1em;
+    line-height: 145%;
+    width: 10%;
+}
+#page3Cont .left ul{}
+#page3Cont .left ul li{}
+#page3Cont .right{
+    width: 85%;
+}
+#page3Cont .right a{
+    display: block;
+}
+#page3Cont .right a h2{
+    font-size: 2.125em;
+    font-weight: 900;
+}
+#page3Cont .right a h3{
+    font-size: 2.125em;
+    font-weight: 400;
+    margin: 1% 0;
+}
+#page3Cont .right a p{
+    color: #333;
+    line-height: 145%;
+}
+
+#page3Cont .page3Box.hide{
+    display: none;
+}
+
+@media only screen and (max-width:940px){
+    #page3Cont .page3Box > a img{
+        max-width: 940px;
+    }
+    #page3 .page3Fix{
+        padding: 0 5%;
+    }
+}
+@media only screen and (max-width:740px){
+
+}
+@media only screen and (max-width:375px){}
+
+/*어바웃*/
+#page4{
+    background-color: #e9e9e9;
+    padding: 5% 0;
+}
+#page4 .page4Inner{
+    position: relative;
+}
+#page4 .page4Top{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3%;
+}
+#page4 .page4Top h1{
+    font-weight: 300;
+    font-size: 2em;
+    color: #333;
+}
+#page4 .page4Top h1 strong{
+    font-weight: 700;
+}
+#page4 .page4Cont{
+    margin-top: 3%;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+}
+#page4 .page4Cont img{
+    display: block;
+    max-width: 300px;
+    height: auto;
+}
+#page4 .page4Cont div{
+    width: 50%;
+    margin-left: 3%;
+}
+#page4 .page4Cont div ul{
+    margin-bottom: 5%;
+}
+#page4 .page4Cont div ul li{
+    font-size: 1.25em;
+    font-weight: 800;
+    line-height: 190%;
+}
+#page4 .page4Cont div ul li span{
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 5%;
+}
+#page4 .page4Cont div p{
+    color: #333;
+    font-size: 1.125em;
+    line-height: 180%;
+}
+
+#page4 .resume{
+    display: inline-block;
+    background-color: #333;
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 10em;
+}
+#page4 .resume p{
+    color: #fff;
+    font-size: 1.25em;
+}
+#page4 .resume p::before{
+
+}
+
+@media only screen and (max-width:940px){
+    #page4 .page4Inner{
+        padding: 0 5%;
+    }
+    #page4 .resume{
+        right: 5%;
+    }
+}
+@media only screen and (max-width:740px){
+
+}
+@media only screen and (max-width:375px){}
+
+
+/* 아이콘 메뉴 */
+#iconMenu{
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
+    transform: translateY(100%);
+    text-align: right;
+}
+#iconMenu ul{}
+#iconMenu ul li{
+    padding: 8px;
+}
+#iconMenu ul li span{
+    display: none;
+    vertical-align: middle;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 8px;
+}
+#iconMenu ul li a{
+    display: inline-block;
+    vertical-align: middle;
+}
+#iconMenu ul li a i{
+}
+#iconMenu ul li a i::before{
+    display: inline-block;
+    font-size: 2em;
+}
+#iconMenu ul li:hover{
+    background-color: rgba(0,0,0,0.8);
     border-radius: 5px;
+}
+#iconMenu ul li:hover span{
+    display: inline-block;
+}
+#iconMenu ul li:hover i::before{
+    color: #fff;
 }

@@ -23,7 +23,7 @@
 <body>
     <header id="header"> <!-- 네비게이션-->
         <nav class="navBar">
-            <div class="logo"><a href="">SJY</a></div>
+            <div class="logo"><a href="#page1">SJY</a></div>
             <div id="pcNav">
                 <ul>
                     <li class="active"><a href="">HOME</a></li>
@@ -60,8 +60,8 @@
     </section>
     <section id="page2"> <!-- 스킬 -->
         <div class="page2Inner">
-            <div class="page2Top"><h1><strong>PROFILE</strong>: 안녕하세요, 신입 <span>프론트 엔드 개발자 성준영</span>입니다.</h1>
-                <a href=""><p class="xi-download">Resume</p></a>
+            <div class="page2Top">
+                <h1><strong>PROFILE</strong>: 안녕하세요, 신입 <span>프론트 엔드 개발자 성준영</span>입니다.</h1>
             </div>
             <div class="page2Cont">
                 <ul>
@@ -90,22 +90,176 @@
         </div>
     </section>
     <section id="page3"> <!-- 포트폴리오 -->
-        <div class="potpInner">
+        <div class="page3Inner">
             <div class="page3Top">
-                <h1><strong>PORTFOLIO</strong></h1>
-                <ul>
-                    <li clas="active">디지털 플랫폼</li>
-                    <li>디지털 마케팅</li>
-                    <li>디지털 컨텐츠</li>
-                </ul>
+                <div class="page3Fix">
+                    <h1><strong>PORTFOLIO</strong></h1>
+                    <ul>
+                        <li>디지털 플랫폼</li>
+                        <li>디지털 마케팅</li>
+                        <li>디지털 컨텐츠</li>
+                    </ul>
+                    <div class="page3Selection">
+                        <ul>
+                            <li class="active" data-filter="*"><a href="">All</a></li>
+                            <li data-filter="ui"><a href="">#UI/UX</a></li>
+                            <li data-filter="br"><a href="">#Branding</a></li>
+                            <li data-filter="gu"><a href="">#GUI</a></li>
+                            <li data-filter="ga"><a href="">#Game</a></li>
+                            <!-- <li><a href="">#Maintenance</a></li> -->
+
+                            <li data-filter="mo"><a href="">#Movie</a></li>
+                            <li data-filter="pr"><a href="">#Promotion</a></li>
+                            <li data-filter="ca"><a href="">#Campaign</a></li>
+                            <!-- <li><a href="">#Commerce</a></li> -->
+                            <li data-filter="co"><a href="">#Consulting</a></li>
+                            <li data-filter="pl"><a href="">#Platform</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page3Cont">
+                <div class="page3Box" data-type="ui gu mo co pl">
+                    <a href=""><img src="./img/potp1.jpeg" alt="page3 Img1"></a>
+                    <div>
+                        <div class="left">
+                            <ul>
+                                <li>#UI/UX</li>
+                                <li>#GUI</li>
+                                <li>#Movie</li>
+                                <li>#Consulting</li>
+                                <li>#Platform</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <a href="">
+                                <h2>Kakao Japan</h2>
+                                <h3>Piccoma TV Platform</h3>
+                                <p>구축 전 과정에서 ‘기다리면 무료’라는</p>
+                                <p>획기적인 비즈니스 모델을</p>
+                                <p>이해하기 쉽도록 표현</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page3Box" data-type="ui br pl">
+                    <a href=""><img src="./img/potp2.jpeg" alt="page3 Img2"></a>
+                    <div>
+                        <div class="left">
+                            <ul>
+                                <li>#UI/UX</li>
+                                <li>#Branding</li>
+                                <li>#Platform</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <a href="">
+                                <h2>NAVER</h2>
+                                <h3>NAVER Corp. Website</h3>
+                                <p>네이버의 다양한 브랜드를 아우르는</p>
+                                <p>가이드라인과 서비스를 보다 명확하게</p>
+                                <p>노출하는 방향으로 사이트 개편</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page3Box">
+                    <a href=""><img src="./img/potp3.jpeg" alt="page3 Img3"></a>
+                    <div>
+                        <div class="left">
+                            <ul>
+                                <li>#UI/UX</li>
+                                <li>#Game</li>
+                                <li>#Platform</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <a href="">
+                                <h2>PUBG</h2>
+                                <h3>BattleGrounds Official Site</h3>
+                                <p>배틀그라운드의 역동성을 살리면서</p>
+                                <p>게임 정보를 보다 편리하게 전달하는 것에</p>
+                                <p>중점을 둔 프로젝트로 웹어워드 코리아 2017 대상</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page3Box">
+                    <a href=""><img src="./img/potp4.jpeg" alt="page4 Img4"></a>
+                    <div>
+                        <div class="left">
+                            <ul>
+                                <li>#UI/UX</li>
+                                <li>#Platform</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <a href="">
+                                <h2>NHN AD</h2>
+                                <h3>OpenAds Website</h3>
+                                <p>국내 최초 오픈마켓형 광고 포털로써</p>
+                                <p>광고 상품정보, 최신 마케팅 트렌드 등을</p>
+                                <p>효율적으로 제공할 수 있도록 제작</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page3Box last">
+                    <a href=""><img src="./img/potp5.jpeg" alt="page5 Img5"></a>
+                    <div>
+                        <div class="left">
+                            <ul>
+                                <li>#Promotion</li>
+                                <li>#Campaign</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <a href="">
+                                <h2>SAMSUNG FINANCE</h2>
+                                <h3>Open Collaboration</h3>
+                                <p>삼성 금융과 스타트업이 협업하는</p>
+                                <p>오픈 콜라보래이션의 홍보/유입을 위한</p>
+                                <p>미디어 집행 등의 마케팅 운영을 진행</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section id="page4"> <!-- 어바웃 -->
-
+        <div class="page4Inner">
+            <div class="page4Top">
+                <h1><strong>About_me</strong>: 실패를 두려워말고 계속해서 도전하자</h1>
+            </div>
+            <div class="page4Cont">
+                <img src="./img/about1.jpg" alt="about">
+                <div>
+                    <ul>
+                        <li>성준영 <span>SEONG JUN YOUNG</span></li>
+                        <li>010-2958-1015</li>
+                        <li>https://github.com/sjy1015</li>
+                    </ul>    
+                        <p>Better than,</p>
+                        <p>어제의 나보다 더 나아지는 오늘을 준비하는 신입 프론트앤드 성준영입니다.</p>
+                        <p>저의 포트폴리오를 읽어 주셔서 감사합니다.</p>
+                </div>
+            </div>
+            <a href="" class="resume">
+                <p class="xi-file-text-o">Resume</p>
+            </a>
+        </div>
     </section>
     <section id="footer"> <!-- 푸터 -->
 
+    </section>
+    <section id="iconMenu">
+        <ul>
+            <li><span>GitHub</span><a href="https://github.com/sjy1015/potpol.git" target="_blank"><i class="xi-github"></i></a></li>
+            <li><span>CodePne</span><a href="https://codepen.io/SRED" target="_blank"><i class="xi-codepen"></i></a></li>
+            <li><span>About</span><a href=""><i class="xi-document"></i></a></li>
+        </ul>
     </section>
 </body>
 </html>

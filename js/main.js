@@ -1,4 +1,27 @@
 $(() => {
+    
+    /* 스크롤 트리거*/
+    const trigger = new ScrollTrigger.default({
+        trigger: {
+            once:true,
+            toggle:{
+                class: {
+                in: 'active',
+                out: 'inactive'
+                }
+            },
+            offset: {
+                viewport: {
+                    x:0,
+                    y:0.25
+                }
+            }
+        }
+    });
+    trigger.add('section[id^=page]'); 
+
+
+    /* 스킬 */
     const skillCont = [
         {
             title : '자바스크립트',
@@ -50,6 +73,90 @@ $(() => {
     }
 
 
+/* 포트폴리오*/
+/* 클릭 이벤트 */
+    for(potpN = 0; potpN < $('.page3Selection li').length; potpN++){
+        $('.page3Selection li').eq(potpN).click(function(e){
+            e.preventDefault();
+            if(!$(this).hasClass('active')){
+                $('.page3Selection li').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    }
+
+    /* 스크롤 이벤트 */
+    const pageNum = ['#page1', '#page2', '#page3', '#page4'];
+    let page3H;
+    let scrollH = 0;
+    let page3Top;
+    let page3Stop;
+    let pageN;
+    let headH;
+
+    $(window).resize(() => {
+        let winH=$(window).height();
+        winHalf = winH * 0.85;
+    });
+    $(window).trigger('resize');
+
+    /* 메뉴 따라 내려가는거 */
+    page3Top = $('.page3Top').offset().top;
+    page3Stop = $('.page3Box.last').offset().top;
+    headH = $('#header').height();
+    lastH = $('.last').height();
+
+    // console.log(lastH);
+
+    $(window).scroll(() => {
+        scrollH = $(window).scrollTop();
+        if(scrollH >= page3Top-headH){
+            if(!$('.page3Top').hasClass('fixed')){ 
+                $('.page3Top').addClass('fixed');
+                $('.page3Top').css({top: headH});
+                $('.page3Top').removeClass('hide');
+            }
+        }
+        else{
+            if($('.page3Top').hasClass('fixed') === true){
+                $('.page3Top').removeClass('fixed');
+                $('.page3Top').removeClass('hide');
+            }
+        }
+        if(page3Stop-lastH <= scrollH){
+            $('.page3Top').removeClass('fixed');
+            $('.page3Top').addClass('hide');
+        }
+
+        if(scrollH < $('#page2').offset().top){
+            pageN = 0;
+        }
+        else if(scrollH < $('#page3').offset().top){
+            pageN = 1;
+        }
+        else if(scrollH < $('#page4').offset().top){
+            pageN = 2;
+            if($(window).height() + scrollH == $(document).height()){
+                pageN = 3;
+            }
+        }
+        else{
+            pageN = 4;
+        }
+        // console.log(pageN);
+        if(!$('#pcNav li').eq(pageN).hasClass('active')){
+            $('#pcNav li').removeClass('active');
+            $('#pcNav li').eq(pageN).addClass('active');
+        }
+    });
+    /* 메뉴 누르면 이동하는거 */
+    $('#pcNav li').click(function(e){
+        e.preventDefault();
+        pageN = $(this).index();
+        let target = $(pageNum[pageN]);
+        pos = target.offset().top;
+        $('html').animate({scrollTop:pos}, 600);
+    });
 
 
 });
