@@ -20,6 +20,48 @@ $(() => {
     });
     trigger.add('section[id^=page]'); 
 
+    /* 스와이프 */
+    const mainSwiper = new Swiper(".mainSwiper", {});
+
+
+    /* page3 탭 움직이는거 */
+    let tabN = 0;
+    // let tabWidth=[];
+    let tabWidth;
+    let tabLeft;
+    let tabClickN = 0;
+
+    $(window).resize(function(){
+		tabLeft=$(".tab").offset().left;
+	});
+
+	$(window).trigger("resize");
+
+    // $(".page3Fix > ul li").each(function(i){
+	// 	tabWidth.push($('.page3Fix > ul li').find("a").width()-10);
+	// });
+    tabWidth=$('.tab > ul li').width();
+
+    let tabInteraction=() => {
+        $('.bar').css({
+            left: $('.tab > ul li').eq(tabN).offset().left-tabLeft,
+            width: tabWidth
+        });
+    }
+    tabInteraction();
+    $('.tab > ul li').hover(function(){
+        tabN=$(this).index();
+        tabInteraction();
+    },
+    function(){
+        tabN=tabClickN;
+        tabInteraction();
+    }
+    );
+    $('.tab > ul li').click(function(e){
+        e.preventDefault();
+        tabClickN=$(this).index();
+    });
 
     /* 스킬 */
     const skillCont = [
@@ -47,7 +89,7 @@ $(() => {
         },
         {
             title : '포토샵 / 일러스트레이터',
-            cont1 : '비트맵 기반 편집 프로그램 포토샵, 벡터 기반 편집 프로그램 일러스트레이터',
+            cont1 : '비트맵 편집 프로그램 포토샵, 벡터 편집 프로그램 일러스트레이터',
             cont2 : '포토샵을 이용한 비트맵 이미지 작업 및 편집',
             cont3 : '일러스트레이터를 이용한 벡터 이미지 작업 및 편집'
         }
@@ -104,7 +146,7 @@ $(() => {
     page3Top = $('.page3Top').offset().top;
     page3Stop = $('.page3Box.last').offset().top;
     headH = $('#header').height();
-    lastH = $('.last').height();
+    lastH = $('.page3Box.last').height();
 
     // console.log(lastH);
 
@@ -127,11 +169,15 @@ $(() => {
             $('.page3Top').removeClass('fixed');
             $('.page3Top').addClass('hide');
         }
+        if($(window).height() + scrollH == $(document).height()){
+            $('.page3Top').removeClass('fixed');
+            $('.page3Top').addClass('hide');
+        }
 
         if(scrollH < $('#page2').offset().top){
             pageN = 0;
         }
-        else if(scrollH < $('#page3').offset().top){
+        else if(scrollH < $('#page3').offset().top-100){
             pageN = 1;
         }
         else if(scrollH < $('#page4').offset().top){
@@ -158,5 +204,31 @@ $(() => {
         $('html').animate({scrollTop:pos}, 600);
     });
 
+    /* 모바일 메뉴 */
+    $('.mobOpen').click(function(e){
+        e.preventDefault();           
+        $('#mobNav').toggleClass('open');
+        $('body').toggleClass('fixed');
+        $('.mobOpen').toggleClass('active');
+    });
+    
+    /*모바일 메뉴 클릭*/
+    for(let mobH = 0; mobH < $('#mobNav li').length; mobH++){
+        $('#mobNav li').eq(mobH).click(function(e){
+            e.preventDefault();
+            $('.mobOpen').removeClass('active');
+            $('body').removeAttr('class');
+            $('#mobNav').removeAttr('class');
+            setTimeout(() => {
+                pageN = $(this).index();
+                let target = $(pageNum[pageN]);
+                pos = target.offset().top;
+                $('html').animate({scrollTop:pos}, 600);
+            }, 500);
+            
+        });
+    }
+
+    
 
 });

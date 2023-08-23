@@ -3,11 +3,33 @@
 body{
     font-family: 'Roboto', 'Noto Sans KR';
 }
+body.fixed{
+    overflow-y: hidden;
+}
 
 div[class*=Inner]{
     margin: 0 auto;
     max-width: 1280px;
 }
+
+@media only screen and (max-width:320px){
+    #page1{
+        font-size: 0.7em;
+    }
+    #page2{
+        font-size: 0.7em;
+    }
+    #page3{
+        font-size: 0.7em;
+    }
+    #page4{
+        font-size: 0.7em;
+    }
+    #iconMenu{
+        font-size: 0.7em;
+    }
+}
+
 
 /* 메뉴 */
 #header{
@@ -34,7 +56,6 @@ div[class*=Inner]{
     font-size: 1.25em;
     font-weight: 800;
     font-family: Nanum Gothic;
-    
 }
 
 
@@ -76,19 +97,35 @@ div[class*=Inner]{
 
 #mobNav{
     display: none;
+    background-color: rgba(0,0,0,0.9);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 888;
 }
-#mobNav ul{}
+#mobNav ul{
+    margin-top: 15%;
+}
 #mobNav ul li{}
-#mobNav ul li a{}
+#mobNav ul li a{
+    display: block;
+    color: #fff;
+}
+#mobNav.open{
+    display: block;
+}
 
 #header .mobOpen{
     background-color: transparent;
     position: absolute;
-    right: 0;
-    top: 20%;
-    width: 3em;
-    height: 3em;
+    right: 3%;
+    top: 25%;
+    width: 2em;
+    height: 2.5em;
     display: none;
+    z-index: 999;
 }
 #header .mobOpen a{}
 #header .mobOpen a span{
@@ -97,10 +134,25 @@ div[class*=Inner]{
     border-radius: 1em;
     display: block;
     background-color: #000;
+    z-index: 999;
+    transition: opacity 0.6s, transform 0.5s;
 
 }
 #header .mobOpen a span:nth-child(2){
-    margin: 0.5em 0;
+    margin: 0.25em 0;
+}
+#header .mobOpen.active a span{
+    background-color: #fff;
+}
+#header .mobOpen.active a span:nth-child(1){
+    transform: rotate(45deg) translateY(14px);
+}
+#header .mobOpen.active a span:nth-child(2){
+    transform: translateX(100px);
+    opacity: 0;
+}
+#header .mobOpen.active a span:nth-child(3){
+    transform: rotate(-45deg) translateY(-14px);
 }
 
 
@@ -114,12 +166,24 @@ div[class*=Inner]{
         display: none;
     }
 }
-@media only screen and (max-width:375px){}
+@media only screen and (max-width:460px){}
 
 /* 메인 페이지 */
 #page1{
-    height: 700px;
 }
+#page1 .page1Slider{}
+#page1 .swiper{}
+#page1 .swiper-wrapper{
+    /* overflow-x: hidden; */
+}
+#page1 .swiper-slide{}
+#page1 .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#page1 .swiper-pagination{}
+#page1 .page1Controller{}
 
 /* 스킬 */
 #page2{
@@ -199,9 +263,34 @@ div[class*=Top] h1 strong::after{
     }
 }
 @media only screen and (max-width:740px){
-    
+    #page2{
+        font-size: 0.75em;
+        padding: 10% 0;
+    }
 }
-@media only screen and (max-width:375px){}
+@media only screen and (max-width:460px){
+    #page2{
+        padding: 15% 0;
+    }
+    #page2 .page2Top h1{
+        line-height: 145%;
+    }
+    #page2 .page2Cont ul li{
+        flex-flow: column wrap;
+        word-break: break-all;
+    }
+    #page2 .page2Cont ul li > h3{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    #page2 .page2Skill {
+        width: 90%;
+        margin-left: 2em;
+    }
+}
+@media only screen and (max-width:320px){
+
+}
 
 /* 포트폴리오 */
 #page3{
@@ -223,25 +312,25 @@ div[class*=Top] h1 strong::after{
     padding-bottom: 2%;
 }
 #page3 .page3Top h1 strong{}
-#page3 .page3Top .page3Fix > ul{
+#page3 .tab > ul{
     display: flex;
     justify-content: start;
     border-top: 1px solid #ccc;
     flex-flow: row wrap;
 }
-#page3 .page3Top .page3Fix > ul li{
+#page3 .tab > ul li{
     font-size: 1.25em;
     font-weight: 500;
     padding-top: 1%;
     margin-right: 5%;
-    border-top: 5px solid transparent;
+    border-top: 5px solid transparent; 
     transition: 0.3s;
     cursor: pointer;
     position: relative;
 }
-#page3 .page3Top .page3Fix > ul li:hover{
+/* #page3 .page3Top .page3Fix > ul li:hover{
     border-top: 5px solid #000;
-}
+}  */
 #page3 .page3Fix{
     max-width: 1280px;
     background-color: #fff;
@@ -256,9 +345,6 @@ div[class*=Top] h1 strong::after{
     justify-content: start;
     flex-flow: row wrap;
 }
-/* #page3 .page3Selection ul:first-child{
-    margin-bottom: 10px;
-} */
 #page3 .page3Selection ul li{
     box-sizing: border-box;
     margin-right: 2%;
@@ -282,7 +368,19 @@ div[class*=Top] h1 strong::after{
 #page3 .page3Top.hide{
     display: none;
 }
-
+#page3 .tab{
+    position: relative;
+}
+#page3 .bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0.25em;
+    background-color: #000;
+    transition: 0.3s;
+    border-radius: 2.5px;
+}
 
 #page3Cont{
 }
@@ -291,6 +389,7 @@ div[class*=Top] h1 strong::after{
 }
 #page3Cont .page3Box > a{}
 #page3Cont .page3Box > a img{
+    width: 100%;
     display: block;
     max-width: 1280px;
     height: auto;
@@ -306,12 +405,12 @@ div[class*=Top] h1 strong::after{
     font-weight: 800;
     font-size: 1em;
     line-height: 145%;
-    width: 10%;
+    width: 15%;
 }
 #page3Cont .left ul{}
 #page3Cont .left ul li{}
 #page3Cont .right{
-    width: 85%;
+    width: 80%;
 }
 #page3Cont .right a{
     display: block;
@@ -343,9 +442,42 @@ div[class*=Top] h1 strong::after{
     }
 }
 @media only screen and (max-width:740px){
-
+    #page3{
+        font-size: 0.75em;
+        padding: 10% 0;
+    }
+    #page3Cont .page3Box{
+        margin-top: 10%;
+    }
+    #page3Cont .page3Box > a img{
+        max-width: 740px;
+    }
+    #page3 .page3Selection{
+        width: 100%;
+    }
 }
-@media only screen and (max-width:375px){}
+@media only screen and (max-width:460px){
+    #page3{
+        padding: 15% 0;
+    }
+    #page3Cont .page3Box > a img{
+        max-width: 460px;
+    }
+    #page3 .page3Selection{
+        width: 100%;
+    }
+    #page3Cont .left{
+        width: 20%;
+    }
+    #page3Cont .right{
+        width: 75%;
+    }
+}
+@media only screen and (max-width:320px){
+    #page3{
+        font-size: 0.7em;
+    }
+}
 
 /*어바웃*/
 #page4{
@@ -422,6 +554,9 @@ div[class*=Top] h1 strong::after{
 }
 
 @media only screen and (max-width:940px){
+    #page4{
+        font-size: 0.75em;
+    }
     #page4 .page4Inner{
         padding: 0 5%;
     }
@@ -430,9 +565,34 @@ div[class*=Top] h1 strong::after{
     }
 }
 @media only screen and (max-width:740px){
+    #page4{
+        padding: 10% 0;
+    }
 
 }
-@media only screen and (max-width:375px){}
+@media only screen and (max-width:460px){
+    #page4{
+        padding: 15% 0;
+    }
+    #page4 .page4Top h1{
+        line-height: 145%;
+    }
+    #page4 .page4Cont div{
+        width: 100%;
+    }
+    #page4 .resume{
+        bottom: 13%;
+        width: 8em;
+        height: 8em;
+        line-height: 8em;
+    }
+}
+@media only screen and (max-width:320px){
+    #page4 .resume{
+        position: static;
+        transform: translate(200%, 30%);
+    }
+}
 
 
 /* 아이콘 메뉴 */

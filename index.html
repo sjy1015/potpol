@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" >
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@terwanerik/scrolltrigger@1.0.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 
 </head>
@@ -45,12 +45,12 @@
     </header>
     <section id="page1">  <!-- 메인 페이지 -->
         <div class="page1Slider">
-            <div class="swiper-container mainSwiper">
+            <div class="swiper mainSwiper">
                 <div class="swiper-wrapper">
-                    <!-- <div class="swiper-slide"><img src="" alt="slide1"></div>
-                    <div class="swiper-slide"><img src="" alt="slide2"></div>
-                    <div class="swiper-slide"><img src="" alt="slide3"></div>
-                    <div class="swiper-slide"><img src="" alt="slide4"></div> -->
+                    <div class="swiper-slide"><img src="./img/slider1.png" alt="slide1"></div>
+                    <div class="swiper-slide"><img src="./img/slider2.png" alt="slide2"></div>
+                    <div class="swiper-slide"><img src="./img/slider3.png" alt="slide3"></div>
+                    <div class="swiper-slide"><img src="./img/slider4.png" alt="slide4"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -94,34 +94,38 @@
             <div class="page3Top">
                 <div class="page3Fix">
                     <h1><strong>PORTFOLIO</strong></h1>
-                    <ul>
-                        <li>디지털 플랫폼</li>
-                        <li>디지털 마케팅</li>
-                        <li>디지털 컨텐츠</li>
-                    </ul>
+                    <div class="tab">
+                        <span class="bar"></span>
+                        <ul>
+                            <li>디지털 플랫폼</li>
+                            <li>디지털 마케팅</li>
+                            <li>디지털 컨텐츠</li>
+                        </ul>
+                    </div>
+                    
                     <div class="page3Selection">
                         <ul>
-                            <li class="active" data-filter="*"><a href="">All</a></li>
-                            <li data-filter="ui"><a href="">#UI/UX</a></li>
-                            <li data-filter="br"><a href="">#Branding</a></li>
-                            <li data-filter="gu"><a href="">#GUI</a></li>
-                            <li data-filter="ga"><a href="">#Game</a></li>
+                            <li class="active"><a href="">All</a></li>
+                            <li ><a href="">#UI/UX</a></li>
+                            <li ><a href="">#Branding</a></li>
+                            <li ><a href="">#GUI</a></li>
+                            <li ><a href="">#Game</a></li>
                             <!-- <li><a href="">#Maintenance</a></li> -->
 
-                            <li data-filter="mo"><a href="">#Movie</a></li>
-                            <li data-filter="pr"><a href="">#Promotion</a></li>
-                            <li data-filter="ca"><a href="">#Campaign</a></li>
+                            <li ><a href="">#Movie</a></li>
+                            <li ><a href="">#Promotion</a></li>
+                            <li ><a href="">#Campaign</a></li>
                             <!-- <li><a href="">#Commerce</a></li> -->
-                            <li data-filter="co"><a href="">#Consulting</a></li>
-                            <li data-filter="pl"><a href="">#Platform</a></li>
+                            <li ><a href="">#Consulting</a></li>
+                            <li ><a href="">#Platform</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div id="page3Cont">
-                <div class="page3Box" data-type="ui gu mo co pl">
-                    <a href=""><img src="./img/potp1.jpeg" alt="page3 Img1"></a>
+                <div class="page3Box">
+                    <a href="./sub/potpol1.html" target="_blank"><img src="./img/potp1.jpeg" alt="page3 Img1"></a>
                     <div>
                         <div class="left">
                             <ul>
@@ -143,7 +147,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="page3Box" data-type="ui br pl">
+                <div class="page3Box">
                     <a href=""><img src="./img/potp2.jpeg" alt="page3 Img2"></a>
                     <div>
                         <div class="left">

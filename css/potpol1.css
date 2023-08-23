@@ -1,0 +1,528 @@
+/* 전체 페이지*/
+body{
+    font-family: 'Roboto', 'Noto Sans KR';
+}
+div[class*=Inner]{
+    max-width: 1055px;
+    margin: 0 auto;
+}
+@media only screen and (max-width:940px){
+    div[class*=Inner]{
+        padding: 0 5%;
+    }
+}
+@media only screen and (max-width:460px){
+    div[class*=Inner]{
+        padding: 10% 5%;
+    }
+}
+
+/* 메인 */
+#page1{}
+#page1 .page1Back{
+    margin: 0 auto;
+    max-width: 1800px;
+    overflow: hidden;
+}
+#page1 .page1Top{}
+#page1 .page1Top a{
+    display: block;
+    margin: 1% 0;
+}
+#page1 .page1Top a img{
+    display: block;
+    max-width: 124px;
+    height: auto;
+}
+#page1 .page1Main{
+    position: relative;
+    background-color: #000;
+}
+/* #page1 .imgBlack{
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 444;
+    width: 100%;
+    height: 990px;
+    position: absolute;
+    left: 0;
+    top: 0;
+} */
+#page1 .page1Main > img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+    z-index: 333;
+    opacity: 0.3;
+}
+#page1 .page1Left{
+    position: absolute;
+    z-index: 555;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+#page1 .page1Left p{
+    font-size: 1.5vw;
+    transform: translateY(-4vw);
+}
+#page1 .page1Left p::after{
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 15%;
+    height: 5px;
+    margin-top: 10px;
+}
+#page1 .page1Left h1{
+    font-size: 5vw;
+    font-weight: 300;
+    line-height: 130%;
+}
+#page1 .page1Left h1:last-child{
+    font-weight: 600;
+}
+#page1 .page1Right{
+
+}
+#page1 .page1Pc{
+    position: absolute;
+    z-index: 998;
+    right: -3%;
+    top: 10%;
+    border: 5px solid #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 50%;
+    height: 65%;
+}
+#page1 .page1Pc img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#page1 .page1Mob{
+    position: absolute;
+    z-index: 999;
+    right: 38%;
+    top: 30%;
+    border: 5px solid #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 15%;
+    height: 55%;
+}
+#page1 .page1Mob img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width:740px){
+    #page1{
+        font-size: 0.75em;
+    }
+    #page1 .page1Top a img{
+        max-width: 80px;
+    }
+}
+@media only screen and (max-width:460px) {
+    #page1 .page1Pc,
+    #page1 .page1Mob{
+        border-radius: 15px;
+        border: 3px solid #fff;
+    }
+    #page1 .page1Left p::after{
+        width: 30%;
+        height: 2px;
+    }
+}
+
+/* 2페이지 */
+#page2{
+    padding: 5% 0;
+}
+#page2 .page2Inner{}
+#page2 .page2Top{}
+#page2 .page2Top1{}
+#page2 .page2Top1 h2{
+    font-size: 2.5em;
+    margin-bottom: 3%;
+}
+#page2 .page2Top1 h2::after{
+    display: inline-block;
+    content: "";
+    background-color: #000;
+    width: 7%;
+    height: 0.75vw;
+    margin-left: 20px;
+}
+#page2 .page2Top1 p{
+    font-size: 1em;
+    line-height: 145%;
+}
+#page2 .page2Top1 p strong{
+    font-weight: 700;
+}
+#page2 .page2Top1 p strong::after{
+    display: inline-block;
+    content: "";
+    background-color: #000;
+    width: 2%;
+    height: 3px;
+    margin:0 20px 0 10px;
+}
+#page2 .page2Top2{
+    margin: 3% 0 5% 0;
+}
+#page2 .page2Top2 p{
+    font-size: 1em;
+    line-height: 145%;
+    font-weight: 500;
+}
+#page2 .page2Img{
+    margin: 0 auto;
+    align-content: center;
+    border: 5px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    max-height: 2200px;
+}
+#page2 .page2Img img{
+    display: inline-block;
+    transform: translate(-10px, -5px);
+}
+
+@media only screen and (max-width:740px){
+    #page2{
+        font-size: 0.75em;
+    }
+    #page2 .page2Img{
+        max-height: 1600px;
+    }
+    #page2 .page2Img img{
+        max-width: 740px;
+    }
+}
+@media only screen and (max-width:460px){
+    #page2 .page2Top2 p span{
+        display: block;
+    }
+    #page2 .page2Img{
+        border: 3px solid #000;
+        border-radius: 15px;
+        max-height: 1000px;
+    }
+    #page2 .page2Img img{
+        max-width: 500px;
+    }
+}
+
+/*페이지3*/
+#page3{
+    background-color: #000;
+    z-index: 888;
+    position: relative;
+    color: #fff;
+    padding: 10% 0;
+    text-align: center;
+}
+#page3::after{
+    background: url('../img/page3Back.jpg') center no-repeat;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: 889;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#page3 .page3Inner{
+    
+}
+#page3 .page3Top{}
+#page3 .page3Top h2{
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 5%;
+}
+#page3 .page3Top p{
+    font-size: 1.125em;
+    line-height: 145%;
+}
+#page3 .page3Main{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+#page3 .page3Box{
+    margin-top: 5%;
+    width: 25%;
+}
+#page3 .page3Box .boxTop{
+    background-color:#0a0a0a;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+}
+#page3 .boxTop div{
+    transform: translateY(5em);
+}
+#page3 .page3Main .page3Box:first-child .boxTop div{
+    transform: translateY(3em);
+}
+#page3 .boxTop div h3{
+    font-size: 1.25em;
+    line-height: 145%;
+    margin-bottom: 1em;
+}
+#page3 .page3Main .page3Box:first-child div h3:nth-child(1){
+    margin-bottom: 0;
+}
+#page3 .boxTop div p{
+    font-size: 1.125em;
+    line-height: 145%;
+}
+#page3 .page3Box img{
+    display: inline-block;
+    margin:30% 0;
+}
+#page3 .boxBot{}
+#page3 .boxBot h3{
+    font-size: 1.25em;
+}
+#page3 .boxBot span{
+    content: "";
+    display: inline-block;
+    background-color: #fff;
+    width: 2em;
+    height: 1px;
+    margin: 5% 0;
+}
+#page3 .boxBot p{
+    font-size: 1.125em;
+    line-height: 145%;
+}
+
+@media only screen and (max-width:740px){
+    #page3{
+        font-size: 0.75em;
+    }
+    /* #page3 .page3Box .boxTop{
+        width: 15em;
+        height: 15em;
+    } */
+}
+@media only screen and (max-width:460px){
+    #page3 .page3Main{
+        flex-flow: column wrap;
+    }
+    #page3 .page3Box{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    #page3 .page3Box img{
+        display: none;
+    }
+    #page3 .boxBot{
+        margin-top: 5%;
+    }
+}
+
+/* 4페이지 */
+#page4{
+    padding: 10% 0;
+    /* position: relative;
+    height: 40vh; */
+}
+#page4 .page4Top{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+#page4 .page4Left{
+    width: 30%;
+    transform: translateX(50%);
+}
+#page4 .page4Left h3{
+    font-size: 1.5em;
+    margin-bottom: 3%;
+}
+#page4 .page4Left p{
+    line-height: 145%;
+    font-size: 1.125em;
+}
+#page4 .page4Right{
+    width: 45%;
+}
+#page4 .page4Right div{
+    margin-bottom: 10%;
+}
+#page4 .page4Right div span{
+    display: inline-block;
+    line-height: 2em;
+    font-size: 1.125em;
+    font-weight: 500;
+}
+#page4 .page4Right div ul{
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+}
+#page4 .page4Right div ul li{
+    width: 10%;
+    color: #aaa;
+}
+#page4 .page4Right div p{
+    font-size: 9vw;
+}
+#page4 .page4Bot{
+    margin: 5% 0;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+#page4 .page4Bot div{
+    height: auto;
+    padding: 2%;
+    /* position: absolute;
+    bottom: 10%;
+    left:5%; */
+}
+#page4 .page4Bot div p{
+    font-size: 1.25em;
+    font-weight: 600;
+}
+#page4 .page4Bot div p:last-child{
+    margin-top: 40%;
+    color: #aaa;
+}
+#page4 .page4Bot .grey{
+    background-color: #f5f5f5;
+    width: 20%;
+}
+#page4 .grey p{
+    color: #000;
+}
+#page4 .page4Bot .black{
+    background-color: #000;
+    width: 25%;
+    /* left: 20%; */
+}
+#page4 .black p{
+    color: #fff;
+}
+#page4 .page4Bot .white{
+    background-color: #fff;
+    width: 30%;
+    /* left: 60%; */
+}
+#page4 .white p{
+    color: #000;
+}
+
+@media only screen and (max-width:740px){
+    #page4{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width:460px){
+    #page4 .page4Top{
+        flex-flow: column wrap;
+        padding: 0 5%;
+        /* transform: translateX(10%); */
+    }
+    #page4 .page4Left{
+        width: 100%;
+        transform: translateX(0);
+        margin-bottom: 5%;
+    }
+    #page4 .page4Right{
+        text-align: center;
+        width: 100%;
+    }
+    #page4 .page4Right div ul{
+        justify-content: space-evenly;
+    }
+    #page4 .page4Right div p{
+        margin: 5% 0;
+    }
+}
+
+/* 페이지 5 */
+#page5{
+    background-color: #f5f5f5;
+    padding: 10% 0;
+}
+#page5 .page5Inner{}
+#page5 .page5Top{
+    margin:0 0 15% 15%;
+}
+#page5 .page5Top h3{
+    font-size: 1.5em;
+}
+#page5 .page5Top p{
+    font-size: 1.125em;
+    margin-top: 3%;
+}
+#page5 .page5Bot{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    text-align: center;
+}
+#page5 .phone{
+    width: 24%;
+    text-align: center;
+    border: 5px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 1% 0;
+    height: 30em;
+}
+#page5 .page5Bot .phone:nth-child(2),
+#page5 .page5Bot .phone:nth-child(5){
+    margin: 1%;
+    transform: translateY(-10%);
+}
+#page5 .phone img{
+    display: inline-block;
+    /* width: 100%; */
+    /* max-width: 255px; */
+    height: auto;
+}
+@media only screen and (max-width:740px){
+    #page5{
+        font-size: 0.75em;
+    }
+    #page5 .phone img{
+        /* max-width: 180px; */
+    }
+}
+@media only screen and (max-width:460px){
+    #page5 .page5Bot{
+        /* flex-flow: wrap; */
+        justify-content: center;
+    }
+    #page5 .phone{
+        margin: 0;
+        width: 60%;
+        border-radius: 15px;
+        margin-bottom: 10%;
+    }
+    #page5 .phone img{}
+    #page5 .page5Bot .phone:nth-child(2),
+    #page5 .page5Bot .phone:nth-child(5){
+    margin: 0 0 10% 0;
+    transform: translateY(0);
+}
+}
