@@ -1,6 +1,5 @@
 $(() => {
-    
-    /* 스크롤 트리거*/
+        /* 스크롤 트리거*/
     const trigger = new ScrollTrigger.default({
         trigger: {
             once:true,
@@ -20,9 +19,104 @@ $(() => {
     });
     trigger.add('section[id^=page]'); 
 
-    /* 스와이프 */
-    const mainSwiper = new Swiper(".mainSwiper", {});
+    const swiperText = [
+		{
+			title: "CREATE SEMANTIC PAGES",
+			subTitle: "Create semantic pages that increase web accessibility",
+			sub1: "W Concept 사이트 리뉴얼",
+			sub2: "제작기간 3주",
+			sub3: "HTML + CSS + jQuery + Figma"
+		},
+		{
+			title: "JAVASCRIPT AND LIBRARIES",
+			subTitle: "Using JavaScript implementations and libraries",
+			sub1: "YBM ECC 사이트 리뉴얼",
+			sub2: "제작기간 3주",
+			sub3: "HTML + CSS + JavaScript + Figma"
+		},
+		{
+			title: "USER INTERFACE USING JavaScript",
+			subTitle: "User interface implementation using JavaScript",
+			sub1: "BARESIO 사이트 리뉴얼",
+			sub2: "제작기간 3주",
+			sub3: "HTML + CSS + JavaScript + Figma"
+		},
+        {
+			title: "USER INTERFACE USING Jquery",
+			subTitle: "User interface implementation using Jquery",
+			sub1: "VOGUE 사이트 리뉴얼",
+			sub2: "제작기간 3주",
+			sub3: "HTML + CSS +  + jQuery + Figma"
+		}
+	];
 
+    /* 스와이프 */
+
+    let mainCurrent, mainTotal;
+
+    const mainSwiper = new Swiper(".mainSwiper", {
+        speed:1200,
+        autoplay:{
+            delay: 5000,
+			disableOnInteraction: false
+        },
+        loop:true,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        on:{
+            init:function(){
+                mainCurrent=this.activeIndex;
+				mainTotal=this.slides.length;
+                textInsert(this.realIndex);
+            },
+            slideChangeTransitionEnd:function(){
+                console.log(this.realIndex);
+                textInsert(this.realIndex);
+            }
+        }
+        
+    });
+
+    /* 메인 스와이프 */
+    function textInsert(n){
+        $(".swiper-slide .slideText").remove();
+		setTimeout(function(){
+			$(".swiper-slide-active").prepend(
+				`<div class="slideText">
+					<strong></strong>
+					<span></span>
+					<p class="mainText">
+						<span></span>
+						<span></span>
+						<span></span>
+					</p>
+				</div>`
+			);
+		}, 10);
+        setTimeout(function(){
+            $('.slideText > strong').text(swiperText[n].title);
+            $('.slideText > span').text(swiperText[n].subTitle);
+            $('.mainText span').eq(0).text(swiperText[n].sub1);
+            $('.mainText span').eq(1).text(swiperText[n].sub2);
+            $('.mainText span').eq(2).text(swiperText[n].sub3);
+            $('.slideText').addClass('active');
+        }, 500);
+    };
+
+    $('#page1 .slidePause').click((e) => {
+        e.preventDefault();
+        if($('.slidePause').hasClass('pause')){
+            $('.slidePause').removeClass('pause');
+            $('.slidePause').addClass('play');
+            mainSwiper.autoplay.stop();
+        }
+        else{
+            $('.slidePause').removeClass('play');
+            $('.slidePause').addClass('pause');
+            mainSwiper.autoplay.start();
+        }
+    });
 
     /* page3 탭 움직이는거 */
     let tabN = 0;
@@ -169,7 +263,7 @@ $(() => {
             $('.page3Top').removeClass('fixed');
             $('.page3Top').addClass('hide');
         }
-        if($(window).height() + scrollH == $(document).height()){
+        else if($(window).height() + scrollH == $(document).height()){
             $('.page3Top').removeClass('fixed');
             $('.page3Top').addClass('hide');
         }
@@ -193,6 +287,15 @@ $(() => {
         if(!$('#pcNav li').eq(pageN).hasClass('active')){
             $('#pcNav li').removeClass('active');
             $('#pcNav li').eq(pageN).addClass('active');
+        }
+
+        if(pageN == 1){
+            $('#header').addClass('white');
+            $('#pcNav').addClass('white');
+        }
+        else if(pageN == 0){
+            $('#header').removeClass('white');
+            $('#pcNav').removeClass('white');
         }
     });
     /* 메뉴 누르면 이동하는거 */

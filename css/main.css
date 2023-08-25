@@ -12,7 +12,44 @@ div[class*=Inner]{
     max-width: 1280px;
 }
 
+@media only screen and (max-width:1280px){
+    #header .navBar{
+        padding: 0 5%;
+    }
+    #page2 .page2Inner{
+        padding: 0 5%;
+    }
+    #page3 .page3Fix{
+        padding: 0 5%;
+    }
+    #page4 .page4Inner{
+        padding: 0 5%;
+    }
+}
+@media only screen and (max-width:740px){
+    /* #header{
+        font-size: 0.75em;
+    } */
+    #page1{
+        font-size: 0.75em;
+    }
+    #page2{
+        font-size: 0.75em;
+    }
+    #page3{
+        font-size: 0.75em;
+    }
+    #page4{
+        font-size: 0.75em;
+    }
+    #iconMenu{
+        font-size: 0.75em;
+    }
+}
 @media only screen and (max-width:320px){
+    /* #header{
+        font-size: 0.7em;
+    } */
     #page1{
         font-size: 0.7em;
     }
@@ -36,7 +73,7 @@ div[class*=Inner]{
     z-index: 9999;
     position: fixed;
     width: 100%;
-    background-color: #fff;
+    background-color:transparent;
     text-align: center;
 }
 #header .navBar{
@@ -56,6 +93,7 @@ div[class*=Inner]{
     font-size: 1.25em;
     font-weight: 800;
     font-family: Nanum Gothic;
+    color: #fff;
 }
 
 
@@ -73,14 +111,14 @@ div[class*=Inner]{
     display: block;
     font-size: 0.875em;
     font-weight: 700;
-    color: #333;
+    color: #ccc;
     padding: 0 1em;
     margin: 0 3em;
     position: relative;
     font-family: Nanum Gothic;
 }
 #pcNav ul li.active a{
-    color: #000;
+    color: #fff;
     font-weight: 800;
 }
 #pcNav ul li.active a::after{
@@ -89,7 +127,7 @@ div[class*=Inner]{
     width: 100%;
     height: 3px;
     border-radius: 2px;
-    background-color: #000;
+    background-color: #fff;
     position: absolute;
     left: 0;
     bottom: 5px;
@@ -122,8 +160,8 @@ div[class*=Inner]{
     position: absolute;
     right: 3%;
     top: 25%;
-    width: 2em;
-    height: 2.5em;
+    width: 2rem;
+    height: 2.5rem;
     display: none;
     z-index: 999;
 }
@@ -131,9 +169,9 @@ div[class*=Inner]{
 #header .mobOpen a span{
     width: 100%;
     height: 15%;
-    border-radius: 1em;
+    border-radius: 1rem;
     display: block;
-    background-color: #000;
+    background-color: #fff;
     z-index: 999;
     transition: opacity 0.6s, transform 0.5s;
 
@@ -141,9 +179,9 @@ div[class*=Inner]{
 #header .mobOpen a span:nth-child(2){
     margin: 0.25em 0;
 }
-#header .mobOpen.active a span{
+/* #header .mobOpen.active a span{
     background-color: #fff;
-}
+} */
 #header .mobOpen.active a span:nth-child(1){
     transform: rotate(45deg) translateY(14px);
 }
@@ -155,6 +193,25 @@ div[class*=Inner]{
     transform: rotate(-45deg) translateY(-14px);
 }
 
+/* 헤더 네비게이션 스크롤 색변환 */
+#header.white{
+    background-color: #fff;
+}
+#header.white .logo a{
+    color: #000;
+}
+#header.white .mobOpen a span{
+    background-color: #000;
+}
+#header.white .mobOpen.active a span{
+    background-color: #fff;
+}
+#pcNav.white ul li.active a{
+    color: #000;
+}
+#pcNav.white ul li.active a::after{
+    background-color: #000;
+}
 
 @media only screen and (max-width:940px){
 }
@@ -171,19 +228,158 @@ div[class*=Inner]{
 /* 메인 페이지 */
 #page1{
 }
-#page1 .page1Slider{}
+#page1 .page1Slider{
+    position: relative;
+}
 #page1 .swiper{}
 #page1 .swiper-wrapper{
     /* overflow-x: hidden; */
 }
 #page1 .swiper-slide{}
-#page1 .swiper-slide img{
+#page1 .swiper-slide video{
     display: block;
     width: 100%;
     height: auto;
+    min-height: 400px;
+    object-fit: cover;
 }
-#page1 .swiper-pagination{}
 #page1 .page1Controller{}
+
+/* 스와이프 내용 관련 */
+#page1 .slideText{
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    z-index: 55;
+    color: #8ac007;
+    text-shadow: #000;
+}
+#page1 .slideText *{
+    display: block;
+}
+#page1 .slideText strong{
+    font-size: 2.5em;
+    opacity: 0;
+    transform: translateX(100px);
+}
+#page1 .slideText > span{
+    font-size: 1.125em;
+    color: #69910c;
+    margin: 5% 0;
+    opacity: 0;
+    transform: translateX(100px);
+}
+#page1 .mainText{
+
+}
+#page1 .mainText span{
+    font-size: 0.75em;
+    margin-top: 2%;
+    opacity: 0;
+    transform: translateX(100px);
+}
+#page1 .mainText span::before{
+    display: inline-block;
+    content: "";
+    border: 0.25em solid #8ac007;
+    width: 0;
+    height: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    opacity: 0;
+    transform: translateX(100px);
+}
+#page1 .slideText.active strong{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.75s, transform 0.75s;
+}
+#page1 .slideText.active > span{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.75s, transform 0.75s;
+    transition-delay: 0.8s;
+}
+
+#page1 .slideText.active .mainText span{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.75s, transform 0.75s;
+}
+#page1 .slideText.active .mainText span:nth-child(1){
+    transition-delay: 1s;
+}
+#page1 .slideText.active .mainText span:nth-child(2){
+    transition-delay: 1.3s;
+}
+#page1 .slideText.active .mainText span:nth-child(3){
+    transition-delay: 1.6s;
+}
+#page1 .slideText.active .mainText span::before{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.75s, transform 0.75s;
+}
+
+
+/* 스와이프 페이지네이션 */
+#page1 .swiper-pagination{
+    transform: translate(5em, -5em);
+    width: 10%;
+}
+#page1 .swiper-pagination-bullet{
+    width: 0.5em;
+    height: 2em;
+    border-radius: 0;
+    background-color: #fff;
+    opacity: 1;
+    transition: 0.5s;
+}
+#page1 .swiper-pagination-bullet-active{
+    background-color: aquamarine;
+    height: 3em;
+}
+#page1 .page1Controller{
+    transform: translate(13em, -6.5em);
+    letter-spacing: 30%;
+    position: absolute;
+    z-index: 87;
+}
+#page1 .slidePause{}
+#page1 .slidePause i{
+    display: block;
+    color: #8ac007;
+}
+#page1 .slidePause.play i::before{
+    content: "\ea3e";
+}
+#page1 .slidePause.pause i::before{
+    content: "\ea3b";
+}
+
+/*
+#page1 .persentBar{
+    background-color: #fff;
+    width: 5em;
+    height: 2px;
+}
+#page1 .persentBar span{
+    display: block;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: aquamarine;
+} */
+
+@media only screen and (max-width:740px){
+    #page1 .swiper-pagination{}
+}
+@media only screen and (max-width:460px){
+    #page1 .swiper-pagination{
+        width: 20%;
+    }
+}
 
 /* 스킬 */
 #page2{
@@ -264,7 +460,6 @@ div[class*=Top] h1 strong::after{
 }
 @media only screen and (max-width:740px){
     #page2{
-        font-size: 0.75em;
         padding: 10% 0;
     }
 }
@@ -304,6 +499,7 @@ div[class*=Top] h1 strong::after{
     background-color: #fff;
     width: 100%;
     padding-bottom: 2%;
+    z-index: 9989;
 }
 #page3 .page3Top h1{
     font-weight: 400;
@@ -391,7 +587,7 @@ div[class*=Top] h1 strong::after{
 #page3Cont .page3Box > a img{
     width: 100%;
     display: block;
-    max-width: 1280px;
+    /* max-width: 1280px; */
     height: auto;
 }
 #page3Cont .page3Box > div{
@@ -443,7 +639,6 @@ div[class*=Top] h1 strong::after{
 }
 @media only screen and (max-width:740px){
     #page3{
-        font-size: 0.75em;
         padding: 10% 0;
     }
     #page3Cont .page3Box{
@@ -602,6 +797,7 @@ div[class*=Top] h1 strong::after{
     bottom: 50%;
     transform: translateY(100%);
     text-align: right;
+    z-index: 8989;
 }
 #iconMenu ul{}
 #iconMenu ul li{
