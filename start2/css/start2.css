@@ -785,8 +785,8 @@ section[id^=page]{
     #page7 .phone{
         margin: 0;
         width: 50%;
-        /* border-radius: 15px; */
         margin-bottom: 10%;
+        border-radius: 2em;
     }
     #page7 .page7Bot .phone:nth-child(2),
     #page7 .page7Bot .phone:nth-child(5){
@@ -799,6 +799,5 @@ section[id^=page]{
         font-size: 0.6em;
     }
     #page7 .phone{
-        width: 70%;
     }
 }
