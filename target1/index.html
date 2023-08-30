@@ -1,465 +1,473 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>wylie</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"/>
-<link rel="stylesheet" href="./main.css" />
-
-<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@terwanerik/scrolltrigger@1.0.5/dist/ScrollTrigger.min.js"></script>
-<script src="./java.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+<title>구름아래소극장</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+<script src="js/ismobile.js"></script>
+<script src="js/main.js"></script>
 </head>
+
 <body>
-<div id="header">
-    <div class="top">
-        <div class="topInner">
-            <div class="logo">
-            <a href=""><img src="./images/logo.png" alt="로고" /></a>
-            </div>
-            <nav class="navBar">
-            <ul>
-                <li class="active"><a href="#header">HOME</a></li>
-                <li><a href="">SOLUTION</a></li>
-                <li><a href="">CONTENTS</a></li>
-                <li><a href="">CULTURE</a></li>
-                <li><a href="">AWARDS</a></li>
-                <li><a href="">CONTACT</a></li>
-            </ul>
-            </nav>
-            <a class="mobOpen" href=""><span></span><span></span><span></span></a>
-        </div>
-    </div>
-    <!-- <div class="headerSlider"></div> -->
-    <div class="swiper headerSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="./images/keyvisual.jpg" alt="배경이미지1" />
-                <div class="textBox">
-                    <p>value of WYLIE</p>
-                    <h2>꿈을꾸고 실현을 상상하며</h2>
-                    <h2>가치를 함께 합니다.</h2>
-                    <a href="">MORE</a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="./images/keyvisual.jpg" alt="배경이미지1" />
-            </div>
-            <div class="swiper-slide">
-                <img src="./images/keyvisual.jpg" alt="배경이미지1" />
-            </div>
-            <div class="swiper-slide">
-                <img src="./images/keyvisual.jpg" alt="배경이미지1" />
-            </div>
-            <div class="swiper-slide">
-                <img src="./images/keyvisual.jpg" alt="배경이미지1" />
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="headerController">
-    <ul>
-        <li><a href="" class="prev"></a></li>
-        <li><a href="" class="next"></a></li>
-    </ul>
-    <a href="" id="pausePlay" class="pause"><i class="xi-pause"></i></a>
-    </div>
-    <div class="mobBar">
-        <div class="mobInner">
-            <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">SOLUTION</a></li>
-                <li><a href="">CONTENTS</a></li>
-                <li><a href="">CULTURE</a></li>
-                <li><a href="">AWARDS</a></li>
-                <li><a href="">CONTACT</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div id="page1">
-    <div class="conInner">
-    <div class="title">
-        <h2>SOLUTION</h2>
-        <p>
-        고객사의 니즈에 최적화된 디지털 통합 마케팅 솔루션을 제공합니다.
-        </p>
-    </div>
-    <div class="content">
-        <ul>
-        <li>
-            <div class="imgBox">
-            <img src="./images/icon_business1.jpg" alt="B1" />
-            </div>
-            <div class="textBox">
-            <h3>Platform Creation</h3>
-            <p>웹/앱 플랫폼 디자인</p>
-            <p>뉴미디어 플랫폼 디자인</p>
-            <p>웹/모바일 퍼블리싱</p>
-            <p>jsp / asp / php / .net 개발</p>
-            <p>iOS / Android개발</p>
-            <p>클라우드 세팅 / 운영</p>
-            </div>
-        </li>
-        <li>
-            <div class="imgBox">
-            <img src="./images/icon_business2.jpg" alt="B2" />
-            </div>
-            <div class="textBox">
-            <h3>Marketion COMM.</h3>
-            <p>마케팅 전략 컨설팅</p>
-            <p>광고 캠페인 기획 운영</p>
-            <p>온, 오프 프로모션 기획 운영</p>
-            <p>바이럴, SNS 기획 운영</p>
-            <p>마케팅 KPI 관리</p>
-            </div>
-        </li>
-        <li>
-            <div class="imgBox">
-            <img src="./images/icon_business3.jpg" alt="B3" />
-            </div>
-            <div class="textBox">
-            <h3>Maintenance</h3>
-            <p>플랫폼 활성화 기획</p>
-            <p>프로모션, 배너 디자인</p>
-            <p>호스팅 개발 운영</p>
-            <p>모니터링, 로그분석, 리포팅</p>
-            <p>고객 CS 관리</p>
-            </div>
-        </li>
-        </ul>
-    </div>
-    </div>
-</div>
-<div id="page2">
-    <div class="potpInner">
-    <div class="title">
-        <h2>CONTENTS</h2>
-        <p>고객사와 하나 된 울림이 만들어 낸 행복한 성과입니다.</p>
-    </div>
-    <div class="potpContent">
-        <ul>
-        <li>
-            <!-- <a href=""> -->
-            <div class="photo">
-            <img src="./images/content1.jpg" alt="content1" />
-            <div class="photoCover"></div>
-            </div>
-            <!-- <div class="poText">
-                            <h3>한화 리조트</h3>
-                            <p>영업용 템플릿 온라인 플랫폼 구축</p>
-                        </div> -->
-            <!-- </a> -->
-        </li>
-        <li>
-            <!-- <a href=""> -->
-            <div class="photo">
-            <img src="./images/content2.jpg" alt="content2" />
-            <div class="photoCover"></div>
-            </div>
-            <!-- <div class="poText">
-                            <h3>ABOUT ME 쇼핑몰</h3>
-                            <p>리뉴얼 제작</p>
-                        </div> -->
-            <!-- </a> -->
-        </li>
-        <li>
-            <!-- <a href=""> -->
-            <div class="photo">
-            <img src="./images/content3.jpg" alt="content3" />
-            <div class="photoCover"></div>
-            </div>
-            <!-- <div class="poText">
-                            <h3>CJ BYO유산균</h3>
-                            <p>2016 디지털 캠페인</p>
-                        </div> -->
-            <!-- </a> -->
-        </li>
-        <li>
-            <!-- <a href=""> -->
-            <div class="photo">
-            <img src="./images/content4.jpg" alt="content4" />
-            <div class="photoCover"></div>
-            </div>
-            <!-- <div class="poText">
-                            <h3>대구은행</h3>
-                            <p>비대면채널 전략 및 UXUI컨설팅</p>
-                        </div> -->
-            <!-- </a> -->
-        </li>
-        <li>
-            <!-- <a href=""> -->
-            <div class="photo">
-            <img src="./images/content5.jpg" alt="content5" />
-            <div class="photoCover"></div>
-            </div>
-            <!-- <div class="poText">
-                            <h3>대유위니아</h3>
-                            <p>서비스 온라인 플랫폼 구축</p>
-                        </div> -->
-            <!-- </a> -->
-        </li>
-        <li>
-            <!-- <a href=""> -->
-            <div class="photo">
-            <img src="./images/content6.jpg" alt="content6" />
-            <div class="photoCover"></div>
-            </div>
-            <!-- <div class="poText">
-                            <h3>쥬비스 다이어트</h3>
-                            <p>APP 3.0 리뉴얼 구축</p>
-                        </div> -->
-            <!-- </a> -->
-        </li>
-        </ul>
-    </div>
-    </div>
-</div>
-<div id="page3">
-    <div class="culInner">
-    <div class="title">
-        <h2>CULTURE</h2>
-        <p>
-        매년 새롭게 구성되는 Club Wylie는 다양한 직군의 멤버들이 조를 이루어
-        </p>
-        <p>한 해 동안 허락된 땡땡이를 즐기며 팀워크를 다집니다.</p>
-    </div>
-    <div class="cultureCont">
-        <ul>
-        <li>
-            <a href="">
-            <div class="cultureText">
-                <h3>PLAY - Wyile Club</h3>
-                <h3>조조 영화, 맛집 탐방, 1박 2일</h3>
-                <p>잘 노는 것도 능력"이라는 모토 아래,</p>
-                <p>조조영화를 보고, 맛집을 찾고, 나들이를 떠나며,</p>
-                <p>잘 놀기만 하면 연말 해외여행이 기다리고 있는</p>
-                <p>와일리만의 Friendship Activity입니다.</p>
-            </div>
-            <div class="culturePhoto">
-                <img src="./images/culture1.jpg" alt="컬쳐1" />
-            </div>
-            </a>
-        </li>
-        <li>
-            <a href="">
-            <div class="culturePhoto">
-                <img src="./images/brand2.jpg" alt="컬쳐2" />
-            </div>
-            <div class="cultureText">
-                <h3>PLAY - WYLIE Refresh</h3>
-                <h3>한 달에 한 번 여유로운 시간</h3>
-                <p>매월 첫 번째 금요일은 여유롭습니다.</p>
-                <p>13시 부터 14시까지 각 팀별/그룹별 간</p>
-                <p>리프레쉬 시간을 함께 하며 사무실을 벗어나</p>
-                <p>생기를 되찾습니다.</p>
-            </div>
-            </a>
-        </li>
-        <li>
-            <a href="">
-            <div class="cultureText">
-                <h3>EAT - Wyile Kitchen</h3>
-                <h3>집밥을 함께 하고픈 마음</h3>
-                <p>매일 점심, 모두 모여 함께 식사를 합니다.</p>
-                <p>바쁜 업무 속에서도 식사만큼은 ‘집밥’을</p>
-                <p>챙겨 먹어야 하는 와일리의 철학 때문입니다.</p>
-                <p>정성 가득한 ‘와일리백반’ 덕분에</p>
-                <p>오늘도 와일리 프로젝트는 ‘밥심’으로 완성됩니다.</p>
-            </div>
-            <div class="culturePhoto">
-                <img src="./images/brand3.jpg" alt="컬쳐3" />
-            </div>
-            </a>
-        </li>
-        <li>
-            <a href="">
-            <div class="culturePhoto">
-                <img src="./images/brand4.jpg" alt="컬쳐4" />
-            </div>
-            <div class="cultureText">
-                <h3>EAT - WYLIE Cafe</h3>
-                <h3>커피향과 함께 시작하는 하루</h3>
-                <p>매일 아침, 은은한 커피향이</p>
-                <p>가득한 곳에서 힘찬 하루를 시작합니다.</p>
-                <p>커피 한 잔으로 나누는 위로와 수다 속에서</p>
-                <p>와일리는 매일 새롭게 태어납니다.</p>
-            </div>
-            </a>
-        </li>
-        <li>
-            <a href="">
-            <div class="cultureText">
-                <h3>STUDY - WYLIE Study</h3>
-                <h3>못 다한 공부 지금도 늦지 않았다</h3>
-                <p>지식, 업무 스킬,</p>
-                <p>트렌드 및 환경 변화의 공유 등을 목표로</p>
-                <p>스터디 문화 조성을 통해 개인 및 팀 역량 향상</p>
-            </div>
-            <div class="culturePhoto">
-                <img src="./images/brand5.jpg" alt="컬쳐5" />
-            </div>
-            </a>
-        </li>
-        </ul>
-    </div>
-    </div>
-</div>
-<div id="page4">
-    <div class="awardInner">
-    <div class="title">
-        <h2>AWARDS</h2>
-        <p>
-        주요 Award의 다양한 수상 실적을 통해 전문성과 크리에이티브를
-        검증받았습니다.
-        </p>
-    </div>
-    <div class="awardCont">
-        <ul>
-        <li>
-            <a href="">
-            <div class="awardPhoto">
-                <img src="./images/img_award1.jpg" alt="어워드1" />
-            </div>
-            <div class="awardText">
-                <strong>KB스타뱅킹</strong>
-                <p>App Award Korea 2018</p>
-                <p>기술이노베이션</p>
-                <p>대상</p>
-            </div>
-            </a>
-        </li>
-        <li>
-            <a href="">
-            <div class="awardPhoto">
-                <img src="./images/img_award2.jpg" alt="어워드2" />
-            </div>
-            <div class="awardText">
-                <strong>서울성모병원</strong>
-                <p>Web Award Korea 2018</p>
-                <p>종합의료분야 & 건강/의료분야</p>
-                <p>대상</p>
-            </div>
-            </a>
-        </li>
-        <li>
-            <a href="">
-            <div class="awardPhoto">
-                <img src="./images/img_award3.jpg" alt="어워드3" />
-            </div>
-            <div class="awardText">
-                <strong>어바웃미</strong>
-                <p>Web Award Korea 2018</p>
-                <p>제품브랜드분야</p>
-                <p>대상</p>
-            </div>
-            </a>
-        </li>
-        </ul>
-    </div>
-    </div>
-</div>
-<div id="banner">
-    <div class="bannerInner">
-    <ul>
-        <li>
-        <a href="">
-            <img src="./images/signature1.jpg" alt="banner1" />
-        </a>
-        </li>
-        <li>
-        <a href="">
-            <img src="./images/signature2.jpg" alt="banner2" />
-        </a>
-        </li>
-        <li>
-        <a href="">
-            <img src="./images/signature3.jpg" alt="banner3" />
-        </a>
-        </li>
-        <li>
-        <a href="">
-            <img src="./images/signature4.jpg" alt="banner4" />
-        </a>
-        </li>
-        <li>
-        <a href="">
-            <img src="./images/signature5.jpg" alt="banner5" />
-        </a>
-        </li>
-        <li>
-        <a href="">
-            <img src="./images/signature6.jpg" alt="banner6" />
-        </a>
-        </li>
-        <li>
-        <a href="">
-            <img src="./images/signature7.jpg" alt="banner7" />
-        </a>
-        </li>
-    </ul>
-    </div>
-</div>
-<div id="page5">
-    <div class="contactInner">
-    <div class="title">
-        <h2>CONTACT US</h2>
-        <p>다양한 경험과 노하우로 성공을 설계합니다.</p>
-    </div>
-    <div class="contactContent">
-        <form action="">
-        <div class="contactForm">
-            <div class="nameEmail">
-            <input type="text" placeholder="YOUR NAME*" required />
-            <input type="text" placeholder="YOUR E-MAIL*" required />
-            <input type="text" placeholder="SUBJECT*" required />
-            </div>
-            <div class="messg">
-            <textarea name="" id="">
-YOUR MESSAGE*
-                            </textarea
-            >
-            </div>
-        </div>
-        <div class="contactButton">
-            <input type="submit" value="SEND MESSAGE" />
-        </div>
-        </form>
-    </div>
-    </div>
-</div>
-<div id="footer">
-    <div class="footerInner">
-    <div class="footerText">
-        <p>
-        주소 : 서울시 송파구 송파대로 201 <br />
-        <span>TEL : 111-1111</span> <span>FAX : 02-111-1111</span>
-        <span>E-mail : wang@wyile.co.kr</span>
-        </p>
-        <p>COPYRIGHTⓒ NEOBRA. ALL RIGHTS RESERVED.</p>
-    </div>
-    <div class="footerIcon">
-        <a href=""><i class="xi-twitter"></i></a>
-        <a href=""><i class="xi-facebook"></i></a>
-        <a href=""><i class="xi-pinterest-p"></i></a>
-        <a href=""><i class="xi-google-plus"></i></a>
-    </div>
-    </div>
-</div>
-<div id="upIcon">
-    <a href="#"><i class="xi-caret-up-circle-o"></i></a>
+<div class="wrapper">
+	<header id="header">
+		<div class="menu_zone">
+			<div class="menu_zone_inner">
+				<div class="logo">
+					<h1><a href=""></a></h1>
+				</div>
+				<nav id="gnb">
+					<ul>
+						<li>
+							<a href="">소극장소개</a>
+							<ul>
+								<li><a href="">인사말</a></li>
+								<li><a href="">구름아래소극장</a></li>
+								<li><a href="">소극장 갤러리</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">시설안내</a>
+							<ul>
+								<li><a href="">음향</a></li>
+								<li><a href="">조명</a></li>
+								<li><a href="">좌석배치도</a></li>
+								<li><a href="">로비 & 티켓박스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">대관안내</a>
+							<ul>
+								<li><a href="">대관절차</a></li>
+								<li><a href="">대관일정</a></li>
+								<li><a href="">대관신청</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">공연안내</a>
+							<ul>
+								<li><a href="">월별공연정보</a></li>
+								<li><a href="">공연사진</a></li>
+								<li><a href="">공연영상</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">커뮤니티</a>
+							<ul>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">SNS</a></li>
+								<li><a href="">공연후기</a></li>
+								<li><a href="">묻고 답하기</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">오시는길</a>
+							<ul>
+								<li><a href="">주차 및 정산</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="menu">
+					<ul class="location">
+						<li class="login"><a href="">Login</a></li>
+						<li class="join"><a href="">Join</a></li>
+						<li class="sns"><a href="">SNS</a></li>
+					</ul>
+					<ol class="site_map clear btn_sitemap">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="main_container">
+			<div class="main_slider">
+				<div class="keyvisual">
+					<ul>
+						<li>
+							<div class="key_img"></div>
+							<div class="m_txt_inner">
+								<div class="m_txt">
+									<h2>
+										<span>문화트렌드를 이끄는 홍대 앞</span>
+										구름아래 소극장
+									</h2>
+									<p>다양한 문화콘텐츠로 일상 속 특별함을 주는 완벽한 공간</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="key_img"></div>
+							<div class="m_txt_inner">
+								<div class="m_txt">
+									<h2>
+										<span>공연자와 관객들이 가질 다양한 감성</span>
+										구름아래 소극장
+									</h2>
+									<p>무대 3면의 LED 백월 연출로 공연자와<br> 관객 모두에게 특별한 시간을 선사합니다.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="key_img"></div> 
+							<div class="m_txt_inner">
+								<div class="m_txt">
+								<h2>
+									<span>문화트렌드를 이끄는 홍대 앞</span>
+									구름아래 소극장
+								</h2>
+								<p>다양한 문화콘텐츠로 일상 속 특별함을 주는 완벽한 공간</p>
+							</div>
+							</div>
+						</li> 
+					</ul>
+				</div>
+				<div class="controller_inner">
+					<div class="controller">
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+					</div>
+				</div>
+				<div class="main_scroll"><img src="images/icon_scroll.png" alt="scroll icon"></div>
+			</div>
+		</div>
+	</header>
+	<div class="contents">
+		<div id="page1">
+			<div class="page1_table">
+				<div class="page1_inner">
+					<div class="description">
+						<div class="content_tit">
+							<h3>SHOW</h3>
+							<p>구름아래소극장에서 다양한 공연을 감상하세요.</p>
+						</div>
+						<ul class="show clearfix">
+							<li>
+								<a href="" class="show_img">
+									<img src="images/show_img1.jpg" alt="show1">
+								</a>
+								<div class="show_tit">
+									<p>단독 공연<br>
+											[ Tutorial：튜토리얼 ]</p>
+								</div>
+							</li>
+							 <li>
+								<a href="" class="show_img">
+									<img src="images/show_img2.jpg" alt="show2">
+								</a>
+								<div class="show_tit">
+									<p>앨범 발매 기념 콘서트<br>
+										<넌 나에게></p>
+								 </div>
+							</li>
+							<li>
+								<a href="" class="show_img">
+									<img src="images/show_img3.jpg" alt="show3">
+								</a>
+								<div class="show_tit">
+									<p>SLEEQ SHOW<br>
+										슬릭(SLEEQ)</p>
+								 </div>
+							</li>
+							<li>
+								<a href="" class="show_img">
+									<img src="images/show_img4.jpg" alt="show4">
+								</a>
+								<div class="show_tit">
+									<p>TWINKLE<br>
+										DONATION CONCERT</p>
+								</div>
+							</li>
+						</ul>
+						<a href="" class="more"><img src="images/btn_more.png" alt="more"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page2">
+			<div class="page2_table">
+				<div class="page2_inner">
+					<div class="description">
+						<div class="content_tit">
+							<h3>RENTAL</h3>
+							<p>구름아래소극장은 무대 3면을 감싸는<br>
+								LED 백월로 다양한 연출이 가능하고, 사석 없는 계단식 좌석으로<br>
+								최적의 관람이 가능한 200석 규모의 공연장입니다.</p>
+						</div>
+						<ul class="rental clearfix">
+							<li>
+								<a href="">
+									<img src="images/rental_img1.png" alt="rental1">
+									<div class="txt">
+										<h5>대관문의</h5>
+										<p>전화문의<br>
+											카카오톡 상담 진행</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/rental_img2.png" alt="rental2">
+									<div class="txt">
+										<h5>대관신청</h5>
+										<p>홈페이지 신청서<br>
+											다운 후 제출</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/rental_img3.png" alt="rental3">
+									<div class="txt">
+										<h5>대관심의</h5>
+										<p>24시간내<br>
+											심의회의 및 결과 통보 </p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/rental_img4.png" alt="rental4">
+									<div class="txt">
+										<h5>계약체결</h5>
+										<p>계약금 납부 및<br>
+											계약서 작성</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page3">
+		  <div class="page3_back">
+				<div class="page3_front"></div>
+				<div class="table">
+					<div class="inner">
+					<div class="cover">
+						<div class="title">
+							<h3>GURUMARE THEATER</h3>
+							<span>최고의 시설과 시스템으로 최적의 관람이 가능합니다.</span>
+						</div>
+						<div class="btns clearfix">
+							<ul>
+								<li class="left_btn"><span class="left"></span></li>
+								<li class="right_btn"><span class="right"></span></li>
+							</ul>
+						</div>
+						<div class="content_box">
+							<div id="page_content">
+								<ul>
+									<li>
+										<div class="photo">
+											<img src="images/icon_slider1.png" alt="icon1">
+											<a href="">더보기<span class="more_btn"></span></a>
+										</div>
+										<ul>
+											<li>무대</li>
+											<li>구름아래소극장은 무대 3면을 감싸는 LED 백월로 다양한 연출이 가능합니다. 딱 200석의 계단식 좌석으로 시야 방해가 없습니다. (기본 192석 + 보조 8석) 오른쪽 팔걸이에는 접이식 테이블이 있어, 필요 시 더 편리하게 관람할 수 있습니다.</li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo">
+											<img src="images/icon_slider2.png" alt="icon2">
+											<a href="">더보기<span class="more_btn"></span></a>
+										</div>
+										<ul>
+											<li>음향</li>
+											<li>구름아래소극장 대관 시, 보유하고 있는 악기/음향 장비 및 기본 오퍼레이팅이 제공됩니다. 32 채널의 첨단 디지털 콘솔과 원격 조명시스템. 상황에 맞는 종류별 마이크 구비는 물론 풍부한 음향과 다채로운 조명을 자랑합니다.</li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo">
+											<img src="images/icon_slider3.png" alt="icon3">
+											<a href="">더보기<span class="more_btn"></span></a>
+										</div>
+										<ul>
+											<li>대기실</li>
+											<li>무대와 바로 연결된 공간으로 출연진의 등장과 퇴장이 자유롭습니다. 구별되는 탈의할 공간을 보유하여 성별에 무관하게 이용 가능합니다. 공연 실황이 중계되는 실시간 모니터 설치로 마음놓고 대기할 수 있습니다.</li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo">
+											<img src="images/icon_slider4.png" alt="icon4">
+											<a href="">더보기<span class="more_btn"></span></a>
+										</div>
+										<ul>
+											<li>로비 & 티켓박스</li>
+											<li>실내에 위치한 로비&티켓박스. 객석으로 바로 통하는 2개의 입장문과 공연 실황이 중계되는 2개의 모니터로 보다 나은 관객의 편의를 추구합니다. 무대와 더불어 공연의 시작과 마무리를 아름답게 장식하는 공간입니다.</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div id="page4">
+			<div class="page4_table">
+				<div class="page4_inner">
+					<div class="desctiption">
+						<div class="content_tit">
+							<h3>CULTURE PLACE</h3>
+							<p>구름아래소극장의 부대시설을 이용해보세요.</p>
+						</div>
+						<div class="culture_place">
+							<ul>
+								<li>
+									<a href="">
+										<div class="photo">
+											<img src="images/culture_place_img1.jpg" alt="image1">
+										</div>
+										<div class="photo_txt">
+											<h5>구름아래 스튜디오</h5>
+											<p>구름아래스튜디오는 사전 예약제로 운영됩니다.</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<div class="photo">
+											<img src="images/culture_place_img2.jpg" alt="image2">
+										</div>
+										<div class="photo_txt">
+											<h5>구름아래 커피집</h5>
+											<p>영업시간 10:50AM - 09:50PM</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page5">
+			<div class="page5_table">
+				<div class="page5_inner">
+					<div class="content_tit">
+						<h3>GALLERY</h3>
+						<p>콘서트, 팬미팅, 쇼케이스, 제작발표회까지<br>
+							다양한 장르의 대관이 모두 잘 어울립니다.</p>
+						<p class="name">밴드 위아더나잇<br>
+						단독 콘서트</p>
+						<p class="more">더보기</p>
+					</div>
+					<div class="gallery_photo">
+						<a href=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page6">
+			<div class="page6_table">
+				<div class="page6_inner">
+					<div class="desctiption"> 
+						<ul>
+							<li class="notice">
+								<div class="content_tit">
+									<h3>NOTICE</h3>
+								</div>
+								<div class="board_area">
+									<ul>
+										<li>
+											<span>2020-12-17</span><a href="">구름아래소극장 2021년 1분기 대관 공고</a>
+										</li>
+										<li>
+											<span>2020-08-14</span><a href="">2020년 10월~12월 대관 공지</a>
+										</li>
+										<li>
+											<span>2020-04-01</span><a href="">코로나19로 인한 휴관 1차 연장 안내</a>
+										</li>
+										<li>
+											<span>2020-03-10</span><a href="">구름아래소극장 개관 1주년 이벤트</a>
+										</li>
+										<li>
+											<span>2020-03-10</span><a href="">구름아래소극장 업무 파트별 담당자 안내</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="newsletter">
+								<div class="content_tit">
+									<h3>NEWSLETTER</h3>
+								</div>
+								<div class="subscribe_form">
+									<p class="title">구름아래소극장의 소식을 받아보세요.</p>
+									<form action="">
+										<input type="text" name="email" placeholder="이메일 주소를 입력하세요" class="email">
+										<input type="text" name="name" placeholder="이름을 입력하세요." class="name">
+										<label>
+											<input type="checkbox">
+											<span>개인정보 수집 및 이용에 동의합니다.</span>
+										</label>
+										<a href="" class="subscribe">subscribe</a>
+									</form>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page7">
+			<div class="page7_area">
+				<div class="page7_table">
+					<div class="page7_inner">
+						<div class="content_tit clearfix">
+							<h3>CONTACT</h3>
+							<ul class="contact">
+								<li><img src="images/icon_tel.png" alt="전화"><span>TEL : 02-3280-8800</span></li>
+								<li><img src="images/icon_fax.png" alt="팩스"><span>FAX : 02-887-0011</span></li>
+								<li><img src="images/icon_msg.png" alt="메일"><span>E-MAIL : manager@gurumare.co.kr</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer id="footer">
+				<div class="foot_inner">
+					<a href="" class="top_btn">TOP</a>
+					<div class="foot_info_top">
+						<p class="name">구름아래소극장</p><br class="br3">
+						<p class="address">서울시 마포구 와우산로29가길 15</p><br class="br1">
+						<p class="tel">TEL : 02-3280-8800</p>
+						<p class="fax">FAX : 02-887-0011</p><br class="br2">
+						<p class="num">사업자번호 : 101-81-42428</p>
+					</div>
+					<div class="foot_info_bottom">
+						<p class="copy">© Copyrights 2020 구름아래소극장 All Right Reserved.</p>
+						<ul class="foot_menu">
+							<li><a href="">개인정보처리방침</a></li>
+							<li><a href="">이메일무단수집거부</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<div id="page_controller">
+		<ul>
+			<li><a href="">SHOW</a></li>
+			<li><a href="">RENTAL</a></li>
+			<li><a href="">GURUMARE</a></li>
+			<li><a href="">CULTURE PLACE</a></li>
+			<li><a href="">GALLERY</a></li>
+			<li><a href="">NOTICE</a></li>
+			<li><a href="">CONTACT</a></li>
+		</ul>
+	</div>
 </div>
 </body>
 </html>

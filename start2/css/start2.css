@@ -27,18 +27,32 @@ section[id^=page]{
     margin: 0 auto;
     max-width: 1800px;
     overflow: hidden;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 #page1 .page1Top{
-    padding: 0 5%;
+    padding: 0 0 0 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 #page1 .page1Top a{
-    display: block;
-    margin: 1% 0;
 }
 #page1 .page1Top a img{
     display: block;
     max-width: 124px;
     height: auto;
+}
+#page1 .page1Top a:first-child img{
+    transform: translateY(100%);
+}
+#page1 .page1Top a:last-child{
+    padding: 1%;
+}
+#page1 .page1Top a:last-child img{
+    max-width: 4vw;
 }
 #page1 .page1Main{
     position: relative;
@@ -147,6 +161,11 @@ section[id^=page]{
         width: 30%;
         height: 2px;
     }
+}
+@media only screen and (max-width:320px){
+    #page1 .page1Top a:first-child img{
+    transform: translateY(50%);
+}
 }
 
 /* 2페이지 */
@@ -768,6 +787,11 @@ section[id^=page]{
     width: 100%;
     /* max-width: 255px; */
     height: auto;
+}
+@media only screen and (max-width:940px){
+    #page7 .phone{
+        width: 30%;
+    }
 }
 @media only screen and (max-width:740px){
     #page7{

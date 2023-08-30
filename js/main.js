@@ -331,7 +331,12 @@ $(() => {
             
         });
     }
-
     
-
+    /* 페이지3 메뉴 클릭 이동 */
+    $('.tab li').click(function(){
+        let offsetN = $(this).index();
+        let offsetY = $('.page3Box').eq(offsetN).offset().top;
+        let offsetBar = ($('.page3Top').height() + $('#header').height());
+        $('html').animate({scrollTop: offsetY - (offsetBar)}, 600);
+    });
 });

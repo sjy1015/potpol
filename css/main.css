@@ -384,7 +384,7 @@ div[class*=Inner]{
 /* 스킬 */
 #page2{
     background-color: #e9e9e9;
-    padding: 5% 0;
+    padding: 10% 0;
 }
 #page2 .page2Inner{
 }
@@ -460,7 +460,6 @@ div[class*=Top] h1 strong::after{
 }
 @media only screen and (max-width:740px){
     #page2{
-        padding: 10% 0;
     }
 }
 @media only screen and (max-width:460px){
@@ -489,7 +488,7 @@ div[class*=Top] h1 strong::after{
 
 /* 포트폴리오 */
 #page3{
-    padding: 5% 0;
+    padding: 10% 0;
     
 }
 #page3 .page3Inner{
@@ -530,6 +529,7 @@ div[class*=Top] h1 strong::after{
 #page3 .page3Fix{
     max-width: 1280px;
     background-color: #fff;
+    margin:0 auto;
 }
 #page3 .page3Selection{
     width: 80%;
@@ -559,7 +559,7 @@ div[class*=Top] h1 strong::after{
 }
 #page3 .page3Top.fixed{
     position: fixed;
-    
+    left:0;
 }
 #page3 .page3Top.hide{
     display: none;
@@ -639,7 +639,6 @@ div[class*=Top] h1 strong::after{
 }
 @media only screen and (max-width:740px){
     #page3{
-        padding: 10% 0;
     }
     #page3Cont .page3Box{
         margin-top: 10%;
@@ -677,7 +676,7 @@ div[class*=Top] h1 strong::after{
 /*어바웃*/
 #page4{
     background-color: #e9e9e9;
-    padding: 5% 0;
+    padding: 10% 0;
 }
 #page4 .page4Inner{
     position: relative;
@@ -761,7 +760,6 @@ div[class*=Top] h1 strong::after{
 }
 @media only screen and (max-width:740px){
     #page4{
-        padding: 10% 0;
     }
 
 }
