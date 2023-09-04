@@ -39,12 +39,16 @@ section[id^=page]{
     width: 100%;
 }
 #page1 .page1Top a{
+    display: block;
+    color: #fff;
+    font-size: 2em;
+    line-height: 80px;
 }
-#page1 .page1Top a img{
+/* #page1 .page1Top a img{
     display: block;
     max-width: 124px;
     height: auto;
-}
+} */
 #page1 .page1Top a:first-child img{
     transform: translateY(100%);
 }
@@ -232,7 +236,7 @@ section[id^=page]{
     margin: 0 auto;
     align-content: center;
     border: 5px solid #000;
-    border-radius: 2.5vw;
+    border-radius: 2.5vw 2.5vw 0 0;
     overflow: hidden;
     max-width: 1000px;
     width: 100%;
@@ -686,7 +690,7 @@ section[id^=page]{
     font-weight: 600;
 }
 #page6 .page6Bot div p:last-child{
-    margin-top: 40%;
+    margin-top: 10vw;
     color: #aaa;
 }
 #page6 .page6Bot .grey{
@@ -738,6 +742,12 @@ section[id^=page]{
     }
     #page6 .page6Right div p{
         margin: 5% 0;
+    }
+    #page6 .page6Bot div p{
+        font-size: 1em;
+    }
+    #page6 .page6Bot div p:last-child{
+        margin-top: 15vw;
     }
 }
 @media only screen and (max-width:320px){

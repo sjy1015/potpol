@@ -190,22 +190,29 @@ $(() => {
     ];
     for(let n = 0; n < $('.page2Cont li').length; n++){
         $('.page2Cont li').eq(n).click(() => {
-            $('.page2Cont .page2Skill').remove();
-            $('.page2Cont li').eq(n).append(`
-                <div class="page2Skill">
-                    <h3 class="title"></h3>
-                    <p class="cont1"></p>
-                    <p class="cont2"></p>
-                    <p class="cont3"></p>
-                </div>
-            `);
-            $('.page2Skill .title').text(skillCont[n].title);
-            $('.page2Skill .cont1').text(skillCont[n].cont1);
-            $('.page2Skill .cont2').text(skillCont[n].cont2);
-            $('.page2Skill .cont3').text(skillCont[n].cont3);
-            $('.page2Skill').slideDown(400);
+            
+                $('.page2Cont .page2Skill').remove();
+                if(!$('.page2Cont li').eq(n).hasClass('active')){
+                    $('.page2Cont li').eq(n).append(`
+                        <div class="page2Skill">
+                            <h3 class="title"></h3>
+                            <p class="cont1"></p>
+                            <p class="cont2"></p>
+                            <p class="cont3"></p>
+                        </div>
+                    `);
+                    $('.page2Skill .title').text(skillCont[n].title);
+                    $('.page2Skill .cont1').text(skillCont[n].cont1);
+                    $('.page2Skill .cont2').text(skillCont[n].cont2);
+                    $('.page2Skill .cont3').text(skillCont[n].cont3);
+                    $('.page2Skill').slideDown(400);
+                    $('.page2Cont li').removeAttr('class');
+                    $('.page2Cont li').eq(n).addClass('active');
+                }
+                else{
+                    $('.page2Cont li').removeAttr('class');
+                }
         });
-
     }
 
 
@@ -339,4 +346,8 @@ $(() => {
         let offsetBar = ($('.page3Top').height() + $('#header').height());
         $('html').animate({scrollTop: offsetY - (offsetBar)}, 600);
     });
+
+    /* 비디오 */
+    let video = document.getElementById('sVideo');
+    video.muted=true;
 });

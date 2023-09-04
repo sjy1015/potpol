@@ -42,7 +42,9 @@ section[id^=page]{
 }
 #page1 .page1Top a{
     vertical-align: middle;
-    padding: 1%;
+    color: #fff;
+    font-size: 2em;
+    line-height: 80px;
 }
 #page1 .page1Top a:first-child{
     display: inline-block;
@@ -50,10 +52,10 @@ section[id^=page]{
 #page1 .page1Top a:last-child{
     /* padding: 1%; */
 }
-#page1 .page1Top a img{
+/* #page1 .page1Top a img{
     display: block;
     height: auto;
-}
+} */
 #page1 .page1Top a:first-child img{
     max-width: 10vw;
 }
@@ -689,7 +691,7 @@ section[id^=page]{
     font-weight: 600;
 }
 #page6 .page6Bot div p:last-child{
-    margin-top: 12vw;
+    margin-top: 10vw;
 }
 #page6 .page6Bot .grey{
     background-color: #f8ab03;
@@ -740,6 +742,12 @@ section[id^=page]{
     }
     #page6 .page6Right div p{
         margin: 5% 0;
+    }
+    #page6 .page6Bot div p{
+        font-size: 1em;
+    }
+    #page6 .page6Bot div p:last-child{
+        margin-top: 15vw;
     }
 }
 @media only screen and (max-width:320px){

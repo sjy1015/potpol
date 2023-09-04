@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" >
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@terwanerik/scrolltrigger@1.0.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <div class="skipNav">
+        <a href="#page1">본문 바로가기</a>
+    </div>
+    <header id="header">
+        <div class="headerInner">
+            <nav class="headMenu">
+                <ul class="menu1">
+                    <li>
+                        <a href="">회관안내</a>
+                            <ul class="menuOpen">
+                                <li><a href="">회관소개</a></li>
+                                <li><a href="">입주단체</a></li>
+                                <li><a href="">이용안내</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="">공연</a>
+                            <ul class="menuOpen">
+                                <li><a href="">공연안내</a></li>
+                                <li><a href="">일정</a></li>
+                                <li><a href="">좌석배치도</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="">전시</a>
+                            <ul class="menuOpen">
+                                <li><a href="">전시안내</a></li>
+                                <li><a href="">연간일정</a></li>
+                                <li><a href="">관람안내</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="">티켓예매</a>
+                            <ul class="menuOpen">
+                                <li><a href="">예매안내</a></li>
+                                <li><a href="">예매가능 공연</a></li>
+                                <li><a href="">예매 확인/취소</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/logo.png" alt=""></a>
+                        <ul class="menuOpen">
+                            <li><span>Gunpo Culture</span><span>&</span><span>Art Center</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">대관</a>
+                            <ul class="menuOpen">
+                                <li><a href="">대관안내</a></li>
+                                <li><a href="">이용료</a></li>
+                                <li><a href="">무대기술자료</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="">문화예술강좌</a>
+                            <ul class="menuOpen">
+                                <li><a href="">강좌안내</a></li>
+                                <li><a href="">강좌신청</a></li>
+                                <li><a href="">강좌확인</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="">관객코너</a>
+                            <ul class="menuOpen">
+                                <li><a href="">관람후기</a></li>
+                                <li><a href="">의견게시판</a></li>
+                                <li><a href="">설문조사</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="depth"></div>
+            <div class="mobOpen">
+                <a href=""><span></span><span></span><span></span></a>
+            </div>
+            <div class="mobMenu">
+                <div class="mobSub">
+                    <a href=""><img src="images/footer_logo.png" alt="로고"></a>
+                    <ul class="mobClick">
+                        <li>
+                            <a href="">회관안내</a>
+                            <ul class="mobOpen2">
+                                <li><a href="">회관소개</a></li>
+                                <li><a href="">입주단체</a></li>
+                                <li><a href="">이용안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">공연</a>
+                            <ul class="mobOpen2">
+                                <li><a href="">공연안내</a></li>
+                                <li><a href="">일정</a></li>
+                                <li><a href="">좌석배치도</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">전시</a>
+                            <ul class="mobOpen2">
+                                <li><a href="">전시안내</a></li>
+                                <li><a href="">연간일정</a></li>
+                                <li><a href="">관람안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">티켓예매</a>
+                            <ul class="mobOpen2">
+                                <li><a href="">예매안내</a></li>
+                                <li><a href="">예매가능 공연</a></li>
+                                <li><a href="">예매 확인/취소</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">대관</a>
+                            <ul class="mobOpen2">
+                                <li><a href="">대관안내</a></li>
+                                <li><a href="">이용료</a></li>
+                                <li><a href="">무대기술자료</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">문화예술강좌</a>
+                            <ul class="mobOpen2">
+                                <li><a href="">강좌안내</a></li>
+                                <li><a href="">강좌신청</a></li>
+                                <li><a href="">강좌확인</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">관객코너</a>
+                            <ul class="mobOpen2">
+                                <li><a href="">관람후기</a></li>
+                                <li><a href="">의견게시판</a></li>
+                                <li><a href="">설문조사</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="page1">
+        <video src="video/slider_video.mp4" autoplay muted loop></video>
+        <div class="page1Text">
+            <div class="page1Title">
+                <h1>문화와</h1>
+                <h1>예술의</h1>
+                <h1>공간</h1>
+            </div>
+            <div class="page1Sub">
+                <strong>사람과 예술이 만나</strong>
+                <strong>생생한 문화의 꽃이 피어나는 곳</strong>
+                <p>Gunpo Culture</p>
+                <p>&</p>
+                <p>Art Center</p>
+            </div>
+        </div>
+    </section>
+    <section id="page2">
+        <div class="page2Inner">
+            <div class="page2Top">
+                <div class="page2Title">
+                    <h2>군포문화예술회관의 SNS를
+                        <span>만나보세요</span>
+                    </h2>
+                </div>
+                <div class="page2Icon">
+                    <a href="">
+                        <img src="images/btn_instagram.png" alt="">
+                        <p>Instagram</p>
+                    </a>
+                    <a href="">
+                        <img src="images/btn_kakao.png" alt="">
+                        <p>Kakao</p>
+                    </a>
+                    <a href="">
+                        <img src="images/btn_youtube.png" alt="">
+                        <p>Youtube</p>
+                    </a>
+                </div>
+            </div>
+            <div class="page2Main">
+                <div class="swiper page2Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/perfomance1.jpg" alt="">
+                            <div class="scjul">
+                                <p>공연</p>
+                                <p>예정</p>
+                            </div>
+                            <div class="slideText">
+                                <span class="date">2021.02.18 (목) 11시</span>
+                                <strong class="name">베토벤의 보석상자</strong>
+                                <p class="rotation">군포문화예술회관 / 수리홀 / 80분</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfomance2.jpg" alt="">
+                            <div class="scjul">
+                                <p>공연</p>
+                                <p>예정</p>
+                            </div>
+                            <div class="slideText">
+                                <span class="date">2021.01.30 (토) 19시</span>
+                                <strong class="name">마술피리</strong>
+                                <p class="rotation">군포문화예술회관 / 수리홀 / 90분</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfomance3.jpg" alt="">
+                            <div class="scjul">
+                                <p>공연</p>
+                                <p>예정</p>
+                            </div>
+                            <div  class="slideText">
+                                <span class="date">2021.01.16 (토) 19시</span>
+                                <strong class="name">2021 신년음악회</strong>
+                                <p class="rotation">군포문화예술회관 / 수리홀 / 100분</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfomance4.jpg" alt="">
+                            <div class="scjul">
+                                <p>공연</p>
+                                <p>예정</p>
+                            </div>
+                            <div  class="slideText">
+                                <span class="date">2021.01.23 (토) 19시</span>
+                                <strong class="name">양방언 <초원의 바람></strong>
+                                <p class="rotation">군포문화예술회관 / 수리홀 / 80분</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfomance5.jpg" alt="">
+                            <div class="scjul">
+                                <p>공연</p>
+                                <p>예정</p>
+                            </div>
+                            <div  class="slideText">
+                                <span class="date">2021.02.18 (목) 오전 11시</span>
+                                <strong class="name">베토벤의 보석상자</strong>
+                                <p class="rotation">군포문화예술회관 / 수리홀 / 80분</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfomance6.jpg" alt="">
+                            <div class="scjul">
+                                <p>공연</p>
+                                <p>예정</p>
+                            </div>
+                            <div  class="slideText">
+                                <span class="date">2021.02.18 (목) 오전 11시</span>
+                                <strong class="name">베토벤의 보석상자</strong>
+                                <p class="rotation">군포문화예술회관 / 수리홀 / 80분</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiperController">
+                        <a href="" class="page2Prev"><img src="images/btn_prev.png" alt=""></a>
+                        <a href="" class="page2Next"><img src="images/btn_next.png" alt=""></a>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section id="page3">
+        <div class="page3Inner">
+            <div class="left">
+                <a href="">
+                    <div class="page3Img">
+                        <img src="images/academy.jpg" alt="">
+                        <div class="trasnP">
+                            <div>
+                                <img src="images/btn_more.png" alt="">
+                                <p>문화예술 강좌 알아보기</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page3Text">
+                        <p>문화예술 아카데미</p>
+                        <h3>문화와 예술을 향유하는 삶</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="right">
+                <a href="">
+                    <div class="page3Img">
+                        <img src="images/gallery.jpg" alt="">
+                        <div class="trasnP">
+                            <div>
+                                <img src="images/btn_more.png" alt="">
+                                <p>문화예술 강좌 알아보기</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page3Text">
+                        <p>문화예술 갤러리</p>
+                        <h3>군포시민과 함께하는 문화예술</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="page4">
+        <div class="page4Inner">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="images/quick_icon1.png" alt="quick1">
+                        <span>공연안내</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick_icon2.png" alt="quick2">
+                        <span>전시행사안내</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick_icon3.png" alt="quick3">
+                        <span>회원안내</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick_icon4.png" alt="quick4">
+                        <span>좌석배치도</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick_icon5.png" alt="quick5">
+                        <span>오시는길</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="page5">
+        <div class="page5Inner">
+            <ul>
+                <li><a href=""><img src="images/exhibition1.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/exhibition2.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/exhibition3.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/exhibition4.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="page6">
+        <div class="page6Inner">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="images/banner1_bg.png" alt="예술 프로젝트">
+                        <div class="page6Text">
+                            <strong>우리동네 예술 프로젝트</strong>
+                            <p>문화 예술단체가 지역사회 주민들과 연계하는 공동체</p>
+                            <p>예술프로젝트 개발 및 지원</p>
+                            <span>자세히보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/banner2_bg.png" alt="창작 지원">
+                        <div class="page6Text">
+                            <strong>지역문화예술단체 지원</strong>
+                            <p>지역예술단체들의 다양한 문화예술활동을 지원하여</p>
+                            <p>예술단체의 역량 강화 및 문화예술 저변 확대 도모</p>
+                            <span>자세히보기</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footerInner">
+            <div class="left">
+                <div class="footerTop">
+                    <a href=".skipNav"><img src="images/footer_logo.png" alt="푸터 로고"></a>
+                </div>
+                <div class="footerBottom">
+                    <span>경기도 군포시 고산로 599(산본동) (우)15820</span>
+                    <span>T. 031-390-3500 FAX. 031-392-3445</span>
+                    <p>Copyright(c) Gunpo Culture & Arts Center All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="footerMenu">
+                    <ul>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">이메일무단수집방지</a></li>
+                        <li><a href="">저작권안내</a></li>
+                        <li><a href="">찾아오시는길</a></li>
+                    </ul>
+                </div>
+                <div class="footerIcon">
+                    <ul>
+                        <li><a href=""><img src="images/btn_sub_instagram.png" alt=""></a></li>
+                        <li><a href=""><img src="images/btn_sub_youtube.png" alt=""></a></li>
+                        <li><a href=""><img src="images/btn_sub_kakao.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

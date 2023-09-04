@@ -608,25 +608,45 @@ div[class*=Top] h1 strong::after{
 #page3Cont .right{
     width: 80%;
 }
-#page3Cont .right a{
+/* #page3Cont .right a{
     display: block;
-}
-#page3Cont .right a h2{
+} */
+#page3Cont .right h2{
     font-size: 2.125em;
     font-weight: 900;
 }
-#page3Cont .right a h3{
+#page3Cont .right h3{
     font-size: 2.125em;
     font-weight: 400;
-    margin: 1% 0;
+    margin: 2% 0;
 }
-#page3Cont .right a p{
+#page3Cont .right p{
     color: #333;
     line-height: 145%;
 }
-
 #page3Cont .page3Box.hide{
     display: none;
+}
+#page3Cont .link{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 50%;
+    margin-top: 3%;
+}
+#page3Cont .link a{
+    display: block;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.125em;
+    padding: 2% 5%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+#page3Cont .link a:hover{
+    background-color: #000;
+    color: #fff;
 }
 
 @media only screen and (max-width:940px){
@@ -665,6 +685,9 @@ div[class*=Top] h1 strong::after{
     }
     #page3Cont .right{
         width: 75%;
+    }
+    #page3Cont .link a:first-child{
+        margin-bottom: 3%;
     }
 }
 @media only screen and (max-width:320px){
