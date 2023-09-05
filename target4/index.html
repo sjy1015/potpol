@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassBox</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" >
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@terwanerik/scrolltrigger@1.0.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="skip">
+        본문 바로가기
+    </div>
+    <header id="header">
+        <div class="inner">
+            <nav class="pcNavi">
+                <div class="logo">
+                    <a href="">
+                        <img src="images/logo.png" alt="로고">
+                    </a>
+                </div>
+                <div class="menu0">
+                    <ul class="menu1">
+                        <li>
+                            <a href="">탑클래스</a>
+                            <ul class="menu2">
+                                <li><a href="">HOME</a></li>
+                                <li><a href="">클럽/챌린지</a></li>
+                                <li><a href="">온라인 클래스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수업지원</a>
+                            <ul class="menu2">
+                                <li><a href="">교재 · 부가자료</a></li>
+                                <li><a href="">커리큘럼</a></li>
+                                <li><a href="">온라인 학습관리</a></li>
+                                <li><a href="">레벨테스트</a></li>
+                                <li><a href="">리딩오션스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">클래스몰</a>
+                            <ul class="menu2">
+                                <li><a href="">크라우드펀딩 몰</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="">Log in</a></li>
+                        <li><a href="">Sign up</a></li>
+                        <li><a href="">웅진킨더박스</a></li>
+                    </ul>
+                </div>
+                <div class="mobOpen">
+                    <!-- <span></span><span></span><span></span> -->
+                    <a href=""><img src="images/menu_mo2.png" alt=""></a>
+                </div>
+            </nav>
+            <nav class="mobNavi">
+                <div class="mobBack">
+                    <div class="mobTop">
+                        <ul>
+                            <li><a href="">Log in</a></li>
+                            <li><a href="">Sign up</a></li>
+                        </ul>
+                        <a href="" class="mobClose"><img src="images/icon_close1.png" alt=""></a>
+                    </div>
+                    <div class="mobMain">
+                        <ul class="mobMenu1">
+                            <li>
+                                <a href=""><span>탑클래스</span> <img src="images/icon_arrow3.png" alt=""></a>
+                                <ul class="mobMenu2">
+                                    <li><a href="">HOME</a></li>
+                                    <li><a href="">클럽/챌린지</a></li>
+                                    <li><a href="">온라인 클래스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><span>수업지원</span> <img src="images/icon_arrow3.png" alt=""></a>
+                                <ul class="mobMenu2">
+                                    <li><a href="">교재·부가자료</a></li>
+                                    <li><a href="">커리큘럼</a></li>
+                                    <li><a href="">온라인 학습관리</a></li>
+                                    <li><a href="">레벨테스트</a></li>
+                                    <li><a href="">리딩오션스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><span>클래스몰</span> <img src="images/icon_arrow3.png" alt=""></a>
+                                <ul class="mobMenu2">
+                                    <li><a href="">클라우드펀딩 몰</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="depth"></div>
+    </header>
+    <section id="page1">
+        <div class="banner">
+            <div class="swiper page1Swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images/slider1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images/slider2.png" alt="">
+                        </a>
+                    </div>
+                    <!-- <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div> -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section id="page2">
+        <div class="inner">
+            <div class="top">
+                <div>
+                    <strong>TOP CLASS</strong>
+                    <h2>전문가들의 노하우를 확인하세요</h2>
+                    <p>대한민국 상위 1% 탑클래스의 노하우를 공유합니다. <span>선생님도 상위 1%가 될 수 있습니다.</span></p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="images/btn_more.png" alt="more">
+                    </a>
+                </div>
+            </div>
+            <div class="page2Main">
+                <div class="swiper page2Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg">
+                                    <img src="images/banner1.png" alt="배너1">
+                                    <span></span>
+                                    <div class="timeBox">
+                                        <div class="timeWrap">
+                                            <div class="time">
+                                                <span class="date"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="hour"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="minite"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="second"></span>
+                                            </div>
+                                        </div>
+                                        <p>해당 기간이 지나면 할인 혜택이 사라집니다</p>
+                                    </div>
+                                </div>
+                                <div class="boxText">
+                                    <strong>박**</strong>
+                                    <p>내적 동기 부여의 궁극적 중요성 불꽃을 점화하는 것^^!!! 
+                                        어디서부터 어떻게 할까요? 
+                                        강의를 듣다 보면 답을 얻을 수 있겠지요?!</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg">
+                                    <img src="images/banner2.png" alt="배너2">
+                                    <span></span>
+                                    <div class="timeBox">
+                                        <div class="timeWrap">
+                                            <div class="time">
+                                                <span class="date"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="hour"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="minite"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="second"></span>
+                                            </div>
+                                        </div>
+                                        <p>해당 기간이 지나면 할인 혜택이 사라집니다</p>
+                                    </div>
+                                </div>
+                                <div class="boxText">
+                                    <strong>박**</strong>
+                                    <p>운영 3년차. 처음에는 단순 시작한 공부방인데 점점 욕심도 나고 아이들을 가르치는 부분에 재미를 느껴가는 중입니다 
+                                        어려움이 당연히 있습니다 때로는 정말 말 안듣는 아이, 이 아이 어떻게 해야 하나 스스로 한계에 부딪힐때도 있고요 
+                                        그런데 그런 차원에서 강의 보면서 많이 생각을 정리했어요 
+                                        어려움은 누구나 있다 내 아이 한명도 키우기 어려운데 30명 넘는 아이들이 
+                                        모두 내마음 같다면 기적이다 자기 관리를 넘어서 원생의 마음을 잡는 선생으로서의 
+                                        내역할이 보이는 강의였습니다 의미있고 좋은 설멸이었습니다</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/banner3.png" alt="배너3">
+                                    <span></span>
+                                    <div class="timeBox">
+                                        <div class="timeWrap">
+                                            <div class="time">
+                                                <span class="date"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="hour"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="minite"></span>
+                                            </div>
+                                            <div class="time">
+                                                <span class="second"></span>
+                                            </div>
+                                        </div>
+                                        <p>해당 기간이 지나면 할인 혜택이 사라집니다</p>
+                                    </div>
+                                </div>
+                                <div class="boxText">
+                                    <strong>이**</strong>
+                                    <p>공부방 준비하면서 고민이 많았는데 사실 강의 보면서 좀 덜컥 겁도 났어요 
+                                        선생님이 말씀하시는 것을 내가 할 수 있을까~ 
+                                        그래도 교육에 대한 자기 주관을 정리하고 학부모를 대할 때 내가 어떤 마음가짐으로 
+                                        해야할지 이런 내용들은 너무 큰 도움 되었습니다 감사해요</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="page3">
+        <div class="inner">
+            <div class="top">
+                <div>
+                    <strong>수업지원</strong>
+                    <h2>선생님이 필요한 수업자료</h2>
+                    <p>선생님의 교육, 클래스박스가 도와드립니다. <span>선생님의 보조교사, 클래스박스와 함께하세요!</span></p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="images/btn_more.png" alt="more">
+                    </a>
+                </div>
+            </div>
+            <div class="page3Main">
+                <div class="swiper page3Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/item1.jpg" alt="item1">
+                                    <span></span>
+                                </div>
+                                <div class="boxText">
+                                    <div>
+                                        <strong>Hang Out! 1 <span>Student Book</span></strong>
+                                    </div>
+                                    <p>CEFR Level : PreA-A1</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/item2.jpg" alt="item2">
+                                    <span></span>
+                                </div>
+                                <div class="boxText">
+                                    <div>
+                                        <strong>Jungle Phonics 2</strong>
+                                    </div>
+                                    <!-- <strong>Student Book</strong> -->
+                                    <p>CEFR Level : Pre-A1</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/item3.jpg" alt="item3">
+                                    <span></span>
+                                </div>
+                                <div class="boxText">
+                                    <div>
+                                        <strong>Hang Out! 2 <span>Student Book</span></strong>
+                                    </div>
+                                    <p>CEFR Level : A1</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/item4.jpg" alt="item4">
+                                    <span></span>
+                                </div>
+                                <div class="boxText">
+                                    <div>
+                                        <strong>Hang Out! 3 <span>Student Book</span></strong>
+                                    </div>
+                                    <p>CEFR Level : A1-A2</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/item5.jpg" alt="item5">
+                                    <span></span>
+                                </div>
+                                <div class="boxText">
+                                    <div>
+                                        <strong>Sounds Great <span>2nd Edition 3</span></strong>
+                                    </div>
+                                    <p>CEFR Level : Pre A1</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/item6.jpg" alt="item6">
+                                    <span></span>
+                                </div>
+                                <div class="boxText">
+                                    <div>
+                                        <strong>Jungle Phonics 1</strong>
+                                        <!-- <strong>Student Book</strong> -->
+                                    </div>
+                                    <p>CEFR Level : Pre-A1</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="page4">
+        <div class="inner">
+            <div class="top">
+                <div>
+                    <strong>클래스몰</strong>
+                    <h2>선생님이 필요한 모든 것, 특별 공구</h2>
+                    <p>선생님이 당장 필요한 모든 것, 맞춤 제작합니다! <span>수요를 확인하고 제작하는 학원업계 유일 크라우드 펀딩!</span></p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="images/btn_more.png" alt="more">
+                    </a>
+                </div>
+            </div>
+            <div class="page4Main">
+                <div class="swiper page4Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="boxImg">
+                                <a href="">
+                                    <img src="images/about.png" alt="about1">
+                                </a>
+                                <span></span>
+                            </div>
+                            <div class="boxText">
+                                <div>
+                                    <a href="">공부방&1인학원 맞춤 양면 자석 화이트보드</a>
+                                </div>
+                                <span class="buyDate"></span>
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="page5">
+        <div class="inner">
+            <div class="top">
+                <div>
+                    <!-- <strong>클래스몰</strong> -->
+                    <h2>15명과 챌린지를 진행해 보세요!</h2>
+                    <p>다양한 이벤트에 참여해 보세요.</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="images/btn_more.png" alt="more">
+                    </a>
+                </div>
+            </div>
+            <div class="page5Main">
+                <div class="swiper page5Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/promotion1.png" alt="promo1">
+                                    <span></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="boxImg"><img src="images/promotion2.png" alt="promo2">
+                                    <span></span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="inner">
+            <div class="footerTop">
+                <img src="images/footer_logo.png" alt="logo">
+            </div>
+            <div class="footerBot">
+                <ul class="info">
+                    <li>(주)웅진컴퍼스</li>
+                    <li>대표 : 김홍석</li>
+                    <li>사업자 등록번호 : 214-87-35792</li>
+                    <li>통신판매신고 : 제 2005-서울서초-05631호</li>
+                </ul>
+                <ul class="add">
+                    <li>주소 : 서울시 서초구 강남대로 39길 15-10 한라비발디스튜디오 193, 3층</li>
+                    <li>전화번호 : 02-3471-0013</li>
+                </ul>
+                <p>© woongjin compass. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="sideMenu">
+        <div class="quickMenu">
+            <a href="" class="quickBtn">
+                <div>
+                    <p>Quick</p>
+                    <p>Menu</p>
+                </div>
+            </a>
+            <ul class="quickOpen">
+                <li>
+                    <p>&nbsp;</p>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick1.png" alt="질문">
+                        <p>자주<span>묻는 질문</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick2.png" alt="카톡">
+                        <p>카카오톡<span>문의하기</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick3.png" alt="카페">
+                        <p>카페<span>바로가기</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick4.png" alt="스토어">
+                        <p>클래스박스<span>스토어</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/quick5.png" alt="유튜브">
+                        <p>유튜브 채널<span>바로가기</span></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="goTop">
+            <a href="">
+                <img src="images/icon_arrow.png" alt="">
+                <p>TOP</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

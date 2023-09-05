@@ -156,55 +156,43 @@ $(() => {
     }
 }
 
-initSwiper();
-initSwiper2();
-
-$(window).on('resize', function () {
-    ww = $(window).width();
     initSwiper();
     initSwiper2();
-});
 
-/* 5페이지 스와이퍼 */
-const page5Swiper = new Swiper(".page5Swiper", {
-    loop:true,
-    pagination: {
-        el: ".swiper-pagination"
-    }
-});
+    $(window).on('resize', function () {
+        ww = $(window).width();
+        initSwiper();
+        initSwiper2();
+    });
 
+    /* 5페이지 스와이퍼 */
+    const page5Swiper = new Swiper(".page5Swiper", {
+        loop:true,
+        pagination: {
+            el: ".swiper-pagination"
+        }
+    });
 
-//     let page3Swiper=undefined;
-//     let winW;
+    /* 스크롤 */
+    let scrollTf;
+    $('body').mousewheel((e, delta) => {
+        console.log(delta);
+        // scrollTf = delta;
+        // $(delta < 0) ? $('#header').addClass('fixed') : $('#header').removeAttr('class');
+        if(delta < 0){
+            $('#header').addClass('fixed');
+            // $('#header').removeClass('hide');
+            }
+            else{
+                $('#header').removeClass('fixed');
+                // $('#header').addClass('hide');
+            }
+    });
+    // $('body').scroll(() => {
+        
+    // });
+    
 
-//     initSwiper = () => {
-//         winW=$(window).width();
-
-//         if(winW <= 760){
-//             page3Swiper = new Swiper(".page3Swiper", {
-//                 loop:true,
-//                 slidesPerView: "auto",
-//                 spaceBetween: 30,
-//                 breakpoints:{
-//                     761:{
-//                         spaceBetween: 10
-//                     }
-//                 }
-//             });
-//         }
-//         else{
-//             // page2Swiper.destroy(true, true);
-//             page3Swiper.destroy();
-//             page3Swiper=undefined;
-//             $(".page3Swiper .swiper-wrapper").removeAttr("style");
-//             $(".page3Swiper .swiper-slide").removeAttr("style");
-//         }
-//     }
-//     initSwiper();
-
-// $(window).on("resize", function(){
-// 	initSwiper();
-// });
 
 
 });

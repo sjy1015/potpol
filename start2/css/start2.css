@@ -37,6 +37,7 @@ section[id^=page]{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 #page1 .page1Top a{
     display: block;

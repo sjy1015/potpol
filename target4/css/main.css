@@ -369,6 +369,12 @@ body.fixed{
 #header .mobMenu1 > li.open img{
     content: url(../images/icon_arrow3_on.png);
 }
+#header.fixed {
+    position: fixed;
+}
+#header.hide{
+    display: none;
+}
 
 @media only screen and (max-width:960px){
     #header .menu0,
