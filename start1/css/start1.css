@@ -22,9 +22,7 @@ section[id^=page]{
 }
 
 /* 메인 */
-#page1{
-    
-}
+#page1{}
 #page1 .page1Back{
     margin: 0 auto;
     max-width: 1800px;
@@ -47,24 +45,21 @@ section[id^=page]{
     font-size: 2em;
     line-height: 80px;
 }
-/* #page1 .page1Top a:first-child{
-    display: inline-block;
+/* #page1 .page1Top a img{
+    display: block;
+    max-width: 124px;
+    height: auto;
 } */
 #page1 .page1Top a:first-child img{
     transform: translateY(100%);
+    
 }
 #page1 .page1Top a:last-child{
     padding: 1%;
 }
-/* #page1 .page1Top a img{
-    display: block;
-    height: auto;
-} */
-/* #page1 .page1Top a:first-child img{
-    max-width: 10vw;
-} */
 #page1 .page1Top a:last-child img{
     max-width: 4vw;
+    vertical-align: middle;
 }
 #page1 .page1Main{
     position: relative;
@@ -117,7 +112,6 @@ section[id^=page]{
 #page1 .page1Left h1:last-child{
     font-weight: 600;
 }
-
 #page1 .page1Right{
 
 }
@@ -161,9 +155,13 @@ section[id^=page]{
     #page1{
         font-size: 0.75em;
     }
+    #page1 .page1Top a{
+    line-height: 40px;
+    }
     #page1 .page1Top a img{
         max-width: 80px;
     }
+    
 }
 @media only screen and (max-width:460px) {
     #page1 .page1Pc,
@@ -175,6 +173,11 @@ section[id^=page]{
         height: 2px;
     }
 }
+@media only screen and (max-width:320px){
+    #page1 .page1Top a:first-child img{
+    transform: translateY(50%);
+}
+}
 
 /* 2페이지 */
 #page2{
@@ -183,7 +186,7 @@ section[id^=page]{
 }
 #page2::after{
     content: "";
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     display: block;
     position: absolute;
     bottom: 0;
@@ -240,7 +243,7 @@ section[id^=page]{
     margin: 0 auto;
     align-content: center;
     border: 5px solid #000;
-    border-radius: 2.5vw 2.5vW 0 0;
+    border-radius: 2.5vw 2.5vw 0 0;
     overflow: hidden;
     max-width: 1000px;
     width: 100%;
@@ -300,13 +303,13 @@ section[id^=page]{
     background: url('../img/keyvisual1.jpg') center no-repeat;
     content: "";
     display: block;
-    width: 100%;
-    height: 100%;
     opacity: 0.5;
     z-index: 889;
     position: absolute;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
 }
 #page3 .page3Inner{
     
@@ -331,9 +334,9 @@ section[id^=page]{
     width: 25%;
 }
 #page3 .page3Box .boxTop{
-    background-color:#4f382e;
-    width: 16em;
-    height: 16em;
+    background-color:#0a0a0a;
+    width: 14.5em;
+    height: 14.5em;
     border-radius: 50%;
 }
 #page3 .boxTop div{
@@ -482,10 +485,11 @@ section[id^=page]{
     flex-flow: row wrap;
     color: #fff;
     padding: 10%;
+    background-size: 100%;
 }
 #page5 .page5Top{
     width: 100%;
-    /* text-indent: 2vw; */
+    text-indent: 2vw;
     margin-bottom: 7%;
 }
 #page5 .page5Top strong{
@@ -499,7 +503,6 @@ section[id^=page]{
 }
 #page5 .page5Left{
     width: 45%;
-    margin-top: 25%;
 }
 #page5 .page5Right{
     width: 45%;
@@ -696,6 +699,7 @@ section[id^=page]{
 }
 #page6 .page6Bot div p:last-child{
     margin-top: 10vw;
+    /* color: #aaa; */
 }
 #page6 .page6Bot .grey{
     background-color: #f8ab03;
@@ -789,7 +793,7 @@ section[id^=page]{
     border-radius: 3vw;
     overflow: hidden;
     margin: 1% 0;
-    max-height: 30em;
+    height: 30em;
 }
 #page7 .page7Bot .phone:nth-child(2),
 #page7 .page7Bot .phone:nth-child(5){
@@ -823,8 +827,8 @@ section[id^=page]{
     #page7 .phone{
         margin: 0;
         width: 50%;
-        border-radius: 2em;
         margin-bottom: 10%;
+        border-radius: 2em;
     }
     #page7 .page7Bot .phone:nth-child(2),
     #page7 .page7Bot .phone:nth-child(5){

@@ -247,7 +247,7 @@ $(() => {
     page3Top = $('.page3Top').offset().top;
     page3Stop = $('.page3Box.last').offset().top;
     headH = $('#header').height();
-    lastH = $('.page3Box.last').height();
+    lastH = $('.page3Box.last').height() / 2;
 
     // console.log(lastH);
 

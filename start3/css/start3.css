@@ -333,8 +333,8 @@ section[id^=page]{
 }
 #page3 .page3Box .boxTop{
     background-color:#0a0a0a;
-    width: 15em;
-    height: 15em;
+    width: 14.5em;
+    height: 14.5em;
     border-radius: 50%;
 }
 #page3 .boxTop div{
