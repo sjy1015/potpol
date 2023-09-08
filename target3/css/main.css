@@ -183,11 +183,13 @@ body.fixed{
     background-color: rgba(0,0,0,0.8);
     text-align: center;
     opacity: 0;
-    transform: translateX(1000px);
+    transform: translateX(100px);
+    display: none;
     /* transform: translateX(100px);
     /* transition: opacity 0.6s, transform 0.4s; */ 
 }
 #header .mobMenu.open{
+    display: block;
     opacity: 1;
     transform: translateX(0);
     /* transform: translateX(0); */
@@ -202,7 +204,7 @@ body.fixed{
     height: 100%;
     padding: 5%;
     opacity: 0;
-    transform: translateX(2000px);
+    transform: translateX(500px);
     transition: opacity 0.6s, transform 0.4s;
 }
 #header .mobMenu.open .mobSub{
