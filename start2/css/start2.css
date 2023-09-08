@@ -6,7 +6,7 @@ div[class*=Inner]{
     max-width: 1055px;
     margin: 0 auto;
 }
-section[id^=page]{
+div[id^=page]{
     max-width: 1800px;
     margin: 0 auto;
 }
@@ -58,6 +58,7 @@ section[id^=page]{
 }
 #page1 .page1Top a:last-child img{
     max-width: 4vw;
+    vertical-align: middle;
 }
 #page1 .page1Main{
     position: relative;
@@ -153,6 +154,9 @@ section[id^=page]{
     #page1{
         font-size: 0.75em;
     }
+    #page1 .page1Top a{
+        line-height: 40px;
+        }
     #page1 .page1Top a img{
         max-width: 80px;
     }

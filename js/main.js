@@ -17,7 +17,7 @@ $(() => {
             }
         }
     });
-    trigger.add('section[id^=page]'); 
+    trigger.add('div[id^=page]'); 
 
     const swiperText = [
 		{
@@ -348,6 +348,6 @@ $(() => {
     });
 
     /* 비디오 */
-    let video = document.getElementById('sVideo');
-    video.muted=true;
+    // let video = document.getElementById('sVideo');
+    // video.muted=true;
 });

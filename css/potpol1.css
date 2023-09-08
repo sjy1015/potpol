@@ -6,7 +6,7 @@ div[class*=Inner]{
     max-width: 1055px;
     margin: 0 auto;
 }
-section[id^=page]{
+div[id^=page]{
     max-width: 1800px;
     margin: 0 auto;
 }
