@@ -182,15 +182,18 @@ body.fixed{
     bottom: 0;
     background-color: rgba(0,0,0,0.8);
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateX(100px);
-    display: none;
-    /* transform: translateX(100px);
-    /* transition: opacity 0.6s, transform 0.4s; */ 
+    visibility: hidden;
+    transition: all 0.5s;
+    /* display: none; */
+    /* transform: translateX(100px); */
+    /* transition: opacity 0.6s, transform 0.4s;  */
 }
 #header .mobMenu.open{
-    display: block;
-    opacity: 1;
+    /* display: block; */
+    /* opacity: 1; */
+    visibility: visible;;
     transform: translateX(0);
     /* transform: translateX(0); */
 }
@@ -205,7 +208,7 @@ body.fixed{
     padding: 5%;
     opacity: 0;
     transform: translateX(500px);
-    transition: opacity 0.6s, transform 0.4s;
+    transition: opacity 0.7s, transform 0.6s;
 }
 #header .mobMenu.open .mobSub{
     opacity: 1;
